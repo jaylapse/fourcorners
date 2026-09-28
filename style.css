@@ -57,8 +57,9 @@ h1, h2 { line-height: 1.2; letter-spacing: -0.015em; margin: 0; }
 	color: var(--fg);
 	text-decoration: none;
 }
-.mark { width: 22px; height: 22px; fill: var(--fg); }
-.mark .accent { fill: var(--accent); }
+.mark { width: 24px; height: 24px; }
+.mark path { fill: none; stroke: var(--fg); stroke-width: 11; stroke-linecap: round; stroke-linejoin: round; }
+.mark .accent { stroke: var(--accent); }
 .top nav { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 22px; font-size: 0.95rem; }
 .top nav a { color: var(--muted); text-decoration: none; }
 .top nav a:hover, .top nav a.current { color: var(--fg); }
