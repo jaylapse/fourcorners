@@ -102,7 +102,7 @@ h1, h2 { line-height: 1.2; letter-spacing: -0.015em; margin: 0; }
 .doc h2 { font-size: 1.25rem; font-weight: 650; margin: 2.4rem 0 0.4rem; }
 .doc .callout + h2 { margin-top: 2.2rem; }
 .doc p { margin: 0.7rem 0; }
-.doc ul { padding-left: 1.25rem; margin: 0.6rem 0; }
+.doc ul, .doc ol { padding-left: 1.25rem; margin: 0.6rem 0; }
 .doc li { margin: 0.35rem 0; }
 .callout {
 	background: var(--surface);
