@@ -240,6 +240,7 @@ h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.15; l
 .hero h1 {
 	font-size: clamp(2.5rem, 7vw, 4.6rem);
 	max-width: 14ch;
+	text-wrap: balance;
 	animation: rise 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) 1.2s both;
 }
 .hero .lead {
