@@ -1,0 +1,86 @@
+name: Site live notice
+
+# Posts to the team Discord once a push to main is actually live on
+# fourcornersgames.ca. The commit itself already shows up in Discord at push
+# time (the repo's GitHub webhook); GitHub Pages then takes a minute or two
+# to publish it, and this says when it has - or that the build failed.
+#
+# It waits on the Pages builds API for this commit's build rather than
+# triggering on Pages' own deploy events, which don't reliably start
+# workflows. DISCORD_WEBHOOK_URL is a repo secret holding the plain Discord
+# webhook URL (the same one YarnToss uses; not the ".../github" variant the
+# commit feed uses). Skipped quietly if the secret isn't set.
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  pages: read
+
+# A newer push supersedes an older one still waiting.
+concurrency:
+  group: site-live-discord
+  cancel-in-progress: true
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Wait for the Pages build and notify Discord
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          SHA: ${{ github.sha }}
+          MESSAGE: ${{ github.event.head_commit.message }}
+          ACTOR: ${{ github.actor }}
+          COMMIT_URL: ${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }}
+          SITE_URL: https://fourcornersgames.ca/
+        run: |
+          if [ -z "$DISCORD_WEBHOOK_URL" ]; then
+            echo "No DISCORD_WEBHOOK_URL secret set - skipping Discord notification."
+            exit 0
+          fi
+
+          # Poll up to 10 minutes for this commit's build to finish.
+          STATUS="timeout"; ERROR=""
+          for i in $(seq 1 40); do
+            BUILD=$(gh api "repos/$REPO/pages/builds/latest" 2>/dev/null || echo '{}')
+            COMMIT=$(echo "$BUILD" | jq -r '.commit // ""')
+            STATE=$(echo "$BUILD" | jq -r '.status // ""')
+            echo "Latest Pages build: ${COMMIT:0:7} $STATE"
+            if [ "$COMMIT" = "$SHA" ] && { [ "$STATE" = "built" ] || [ "$STATE" = "errored" ]; }; then
+              STATUS="$STATE"
+              ERROR=$(echo "$BUILD" | jq -r '.error.message // ""')
+              break
+            fi
+            sleep 15
+          done
+
+          case "$STATUS" in
+            built)   TITLE="🌐 fourcornersgames.ca updated"; COLOR=5763719 ;;
+            errored) TITLE="❌ Site build failed";            COLOR=15548997 ;;
+            *)       TITLE="⚠️ Site build not confirmed";      COLOR=16705372
+                     ERROR="No finished Pages build for this commit after 10 minutes - check the repo's Actions tab." ;;
+          esac
+
+          SUBJECT=$(printf '%s' "$MESSAGE" | head -n 1)
+          jq -n \
+            --arg title "$TITLE" --argjson color "$COLOR" \
+            --arg sha "${SHA:0:7}" --arg message "$SUBJECT" --arg actor "$ACTOR" \
+            --arg commit "$COMMIT_URL" --arg site "$SITE_URL" --arg error "$ERROR" \
+            --arg status "$STATUS" \
+            '{embeds: [{
+                title: $title,
+                url: (if $status == "built" then $site else $commit end),
+                color: $color,
+                description: ("[`" + $sha + "`](" + $commit + ") " + $message),
+                fields: ([{name: "Pushed by", value: $actor, inline: true}]
+                  + (if $status == "built" then [{name: "Site", value: $site, inline: true}] else [] end)
+                  + (if $error != "" then [{name: "Details", value: $error}] else [] end))
+              }]}' > discord.json
+          curl -sS --fail -H "Content-Type: application/json" -d @discord.json "$DISCORD_WEBHOOK_URL" \
+            || echo "Discord notification failed (the site itself is unaffected)."

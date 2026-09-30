@@ -54,3 +54,16 @@ account-deletion page if it has accounts. To add a game:
 icon) and a few character sprites, resized and converted to webp. Only
 listing/marketing art belongs here - don't publish game builds or asset
 dumps (see the web-build retirement note in YarnToss's `CLAUDE.md`).
+
+## Discord notices
+
+Two things post to the team Discord channel, through the same webhook
+YarnToss uses:
+- **Commits:** a repo webhook (Settings -> Webhooks) pointed at the Discord
+  webhook URL with `/github` on the end, content type `application/json`.
+  Posts every push, on any branch.
+- **"Site updated"**: `.github/workflows/site-live-discord.yml`, on every push
+  to `main`. It waits for GitHub Pages to finish building that commit, then
+  posts that it's live (or that the build failed, or never finished within
+  10 minutes). Needs the plain webhook URL (no `/github`) as the
+  `DISCORD_WEBHOOK_URL` repo secret; without it the workflow does nothing.
