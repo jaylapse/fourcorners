@@ -501,7 +501,7 @@ footer.site .cols {
 }
 footer.site h3 { font-family: var(--body); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--fg); margin-bottom: 12px; }
 footer.site ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
-footer.site a { color: var(--muted); text-decoration: none; }
+footer.site a { color: var(--muted); text-decoration: none; overflow-wrap: anywhere; }
 footer.site a:hover { color: var(--fg); text-decoration: underline; }
 footer.site .brand { margin-bottom: 10px; }
 footer.site p { margin: 0; max-width: 32ch; }
@@ -513,16 +513,27 @@ footer.site .base { max-width: var(--max); margin: 0 auto; padding: 18px 24px 40
 	.game-card .info { grid-template-columns: 1fr; }
 	.game-card .info > * { grid-column: 1 !important; grid-row: auto !important; }
 	.features { grid-template-columns: 1fr; }
-	footer.site .cols { grid-template-columns: 1fr 1fr; }
+	footer.site .cols { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
 	footer.site .cols > div:first-child { grid-column: 1 / -1; }
 	.stage { margin: 24px auto 20px; }
 	.stage .cat { left: -30%; }
 }
 @media (max-width: 640px) {
 	body { font-size: 16.5px; }
-	.top .bar { padding: 12px 16px; }
-	.top nav { gap: 4px 16px; font-size: 0.9rem; }
-	.top nav .opt { display: none; }
+	/* One line: logo, Discord, language. Games/About/Contact are home-page
+	   sections, also linked from the footer. */
+	.top .bar { padding: 10px 16px; flex-wrap: nowrap; }
+	.brand { font-size: 1rem; gap: 8px; }
+	.top nav { flex-wrap: nowrap; gap: 12px; font-size: 0.9rem; }
+	.top nav a:not(.icon-link):not(.lang) { display: none; }
+	/* A game's sub-menu is one row that scrolls sideways. */
+	.subnav .wrap { flex-wrap: nowrap; overflow-x: auto; white-space: nowrap; scrollbar-width: none; gap: 20px; padding-top: 8px; padding-bottom: 8px; }
+	.subnav .wrap::-webkit-scrollbar { display: none; }
+	.subnav .wrap { -webkit-mask-image: linear-gradient(90deg, #000 82%, transparent); mask-image: linear-gradient(90deg, #000 82%, transparent); }
+	.subnav .wrap > * { flex: none; }
+	.subnav .game { margin-right: 4px; }
+	.contact-card .actions { width: 100%; }
+	.contact-card .actions .btn { flex: 1 1 auto; justify-content: center; font-size: 0.9rem; padding: 11px 14px; overflow-wrap: anywhere; }
 	.wrap { padding: 0 16px; }
 	.hero { padding: 56px 0 48px; }
 	.framed { padding: 24px 26px; margin-left: -8px; }
@@ -539,6 +550,14 @@ footer.site .base { max-width: var(--max); margin: 0 auto; padding: 18px 24px 40
 	.doc { padding: 36px 16px 32px; }
 	footer.site .cols { padding: 36px 16px 20px; }
 	footer.site .base { padding: 16px 16px 32px; }
+}
+
+/* The smallest phones (320-374px): tighten the header so it stays one line. */
+@media (max-width: 374px) {
+	.brand { font-size: 0.92rem; gap: 7px; }
+	.mark { width: 22px; height: 22px; }
+	.top nav { gap: 8px; }
+	.top nav a.lang { padding: 2px 9px; font-size: 0.8rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
