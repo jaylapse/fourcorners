@@ -14,6 +14,9 @@ name: Site live notice
 on:
   push:
     branches: [main]
+  # "Run workflow" button on the Actions tab: re-sends the notice for main's
+  # latest commit without pushing anything.
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -37,12 +40,23 @@ jobs:
           SHA: ${{ github.sha }}
           MESSAGE: ${{ github.event.head_commit.message }}
           ACTOR: ${{ github.actor }}
+          REF: ${{ github.ref_name }}
           COMMIT_URL: ${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }}
           SITE_URL: https://fourcornersgames.ca/
         run: |
           if [ -z "$DISCORD_WEBHOOK_URL" ]; then
             echo "No DISCORD_WEBHOOK_URL secret set - skipping Discord notification."
             exit 0
+          fi
+          # Pages only publishes main, so a manual run from another branch would
+          # just wait out the timeout.
+          if [ "$REF" != "main" ]; then
+            echo "Run from $REF - only main is published to the site. Nothing to report."
+            exit 0
+          fi
+          # Manual runs carry no pushed commit, so look its message up.
+          if [ -z "$MESSAGE" ]; then
+            MESSAGE=$(gh api "repos/$REPO/commits/$SHA" --jq '.commit.message' 2>/dev/null || echo "")
           fi
 
           # Poll up to 10 minutes for this commit's build to finish.
