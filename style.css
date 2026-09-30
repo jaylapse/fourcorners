@@ -151,6 +151,11 @@ h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.15; l
 	font-size: 0.85rem;
 }
 .top nav a.lang:hover { background: var(--surface); }
+.top nav a.icon-link { display: inline-flex; padding: 4px; margin: -4px 0; border-radius: 8px; }
+.top nav a.icon-link svg { width: 20px; height: 20px; }
+.top nav a.icon-link:hover { color: #5865f2; }
+.btn svg { width: 18px; height: 18px; flex: none; }
+.btn.discord { background: #5865f2; color: #fff; }
 
 /* ---------- buttons, pills ---------- */
 .btn {
@@ -331,6 +336,7 @@ h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.15; l
 .contact-card h2 { font-size: clamp(1.6rem, 3.5vw, 2.2rem); }
 .contact-card p { margin: 8px 0 0; opacity: 0.75; max-width: 44ch; }
 .contact-card .btn { background: var(--bg); color: var(--fg); }
+.contact-card .btn.discord { background: #5865f2; color: #fff; }
 .contact-card .deco { position: absolute; right: -30px; bottom: -30px; width: 180px; height: 180px; opacity: 0.08; color: var(--bg); pointer-events: none; }
 
 /* ---------- game page ---------- */
@@ -431,8 +437,10 @@ h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.15; l
 .band img { width: 100%; max-width: 220px; filter: drop-shadow(0 12px 16px rgb(60 30 10 / 0.2)); }
 .band h2 { font-size: clamp(1.6rem, 3.6vw, 2.3rem); }
 .band p { color: var(--muted); margin: 10px 0 0; max-width: 52ch; }
+.band .actions { margin-top: 20px; }
+@media (max-width: 640px) { .band .actions { justify-content: center; } }
 
-.links { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.links { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 14px; }
 .links a {
 	display: block;
 	background: var(--card);
@@ -445,7 +453,7 @@ h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.15; l
 }
 .links a:hover { border-color: var(--accent); transform: translateY(-2px); }
 .links b { display: block; font-weight: 600; }
-.links span { color: var(--muted); font-size: 0.9rem; line-height: 1.45; display: block; margin-top: 4px; }
+.links span { overflow-wrap: anywhere; color: var(--muted); font-size: 0.9rem; line-height: 1.45; display: block; margin-top: 4px; }
 
 /* sub-navigation shown on a game's legal pages */
 .subnav { border-bottom: 1px solid var(--line); background: var(--surface); }
@@ -505,7 +513,6 @@ footer.site .base { max-width: var(--max); margin: 0 auto; padding: 18px 24px 40
 	.game-card .info { grid-template-columns: 1fr; }
 	.game-card .info > * { grid-column: 1 !important; grid-row: auto !important; }
 	.features { grid-template-columns: 1fr; }
-	.links { grid-template-columns: 1fr 1fr; }
 	footer.site .cols { grid-template-columns: 1fr 1fr; }
 	footer.site .cols > div:first-child { grid-column: 1 / -1; }
 	.stage { margin: 24px auto 20px; }
