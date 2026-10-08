@@ -67,3 +67,23 @@ YarnToss uses:
   posts that it's live (or that the build failed, or never finished within
   10 minutes). Needs the plain webhook URL (no `/github`) as the
   `DISCORD_WEBHOOK_URL` repo secret; without it the workflow does nothing.
+
+## Dev panel (`/dev/yarntoss/`)
+
+A hidden page for the YarnToss devs: both leaderboards, every player's full
+cloud save (click a name) with editing, rename history, `config/*` docs, and
+dev messages that pop up in every open game. Not linked from anywhere and
+marked `noindex`, but the URL is not the protection: everything goes through
+Firestore with the dev's own login, and the rules only allow it for accounts
+whose `scores/{uid}` has `is_dev: true` (see YarnToss's `docs/firebase.md`,
+"Web dev panel"). It's the one page that talks to a third party (Google's
+Firebase APIs), and only once a dev signs in.
+
+- Sign in with the **email and password** of a dev account (Play Games-only
+  accounts can't sign in on the web; YarnToss's doc says how to add one).
+- `dev/yarntoss/game-data.js` holds the names of achievements, catalogue
+  entries, skins, cosmetics, Workshop upgrades and rooms, copied from the game.
+  After changing any of those in YarnToss, regenerate it:
+  `python tools/yarntoss_dev_data.py ../YarnToss`
+- What the panel can edit (`EDITABLE` in `app.js`) must match what the game
+  adopts after a dev edit (`CloudSave._adopt_field()` in YarnToss).
