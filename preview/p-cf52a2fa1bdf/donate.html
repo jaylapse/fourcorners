@@ -4,74 +4,168 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
-  <title>Donate & Buy Premium – BubbaGame</title>
-  <meta name="description" content="How to buy BubbaGame premium scrolls: Tibia Coins, crypto or Twitch.">
-  <meta name="theme-color" content="#120d24">
+  <title>Donate &amp; buy Premium – BubbaGame</title>
+  <meta name="description" content="How to buy BubbaGame premium: contact GM BubbaGame in game and pay with Tibia Coins, crypto or Twitch.">
+  <meta name="theme-color" content="#0d0517">
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="apple-touch-icon" href="favicon.png">
+  <link rel="preload" href="fonts/baloo2.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
 </head>
 <body>
-  <a class="skip" href="#main">Skip to content</a>
-
-  <header class="wrap hero">
-    <a href="index.html"><img src="img/banner.jpg" width="1960" height="600" alt="BubbaGame.online – A Realm Reborn. Server 7.4, EU, 7.72 client. 2x EXP, 1x rest." fetchpriority="high"></a>
-    <nav class="nav" aria-label="Main">
-      <a href="index.html">Home</a>
-      <a href="shop.html">Item Shop &amp; Premium</a>
-      <a href="donate.html" aria-current="page">Donate</a>
-      <span class="spacer"></span>
-      <button type="button" data-open="login">Login</button>
-      <button type="button" class="cta" data-open="register">Create Account</button>
-    </nav>
-  </header>
-
-  <main id="main" class="wrap">
-
-    <h1>Donate &amp; Buy Premium</h1>
-    <section class="panel" aria-labelledby="order">
-      <h2 id="order">How to order</h2>
-      <p>Automated web shop purchases are offline. All premium scroll orders are handled manually by the administration to ensure secure processing.</p>
-      <p><b>Contact BubbaGame for purchase.</b> You can pay via:</p>
-      <ul class="checklist">
-        <li>Tibia Coins (Real Tibia)</li>
-        <li>Crypto</li>
-        <li>Twitch Subscriptions/Donations</li>
-        <li>Perhaps other ways too &ndash; ask me!</li>
-      </ul>
-    </section>
-    <div class="notice" role="note" style="margin-top:20px">
-      <strong>&#9888;&#65039; Important:</strong> Contact me in game, <b>GM BubbaGame</b>, and I will come to you personally (can only be done when I&#39;m online).
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="masthead" data-masthead>
+  <div class="topbar" role="region" aria-label="Server status">
+    <div class="container topbar__inner">
+      <span class="status"><span class="status-dot" aria-hidden="true"></span>Online</span>
+      <span class="topbar__item"><b class="topbar__num">24</b> players online</span>
+      <span class="topbar__item topbar__hide-md">Serversave in <b data-countdown="07:00">--:--:--</b></span>
+      <span class="sample-tag">Sample</span>
+      <span class="topbar__spacer"></span>
+      <span class="topbar__item topbar__ip"><span class="topbar__hide-xs">IP <code>95.179.145.195</code></span>
+        <button type="button" class="copy-btn" data-copy="95.179.145.195" data-copy-label="IP">Copy<span class="topbar__show-xs"> IP</span></button></span>
+      <span class="topbar__item topbar__hide-md">Version 7.72</span>
+      <a class="topbar__item topbar__hide-md" href="https://twitch.tv/BubbaGame" rel="noopener">Twitch</a>
     </div>
-    <p><a class="btn alt" href="index.html">&larr; Back to homepage</a></p>
+  </div>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html"><img src="favicon.png" width="36" height="36" alt=""><span class="brand__name">BubbaGame</span></a>
+      <nav class="site-nav" id="site-nav" aria-label="Main" data-nav>
+        <ul class="site-nav__list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="play.html">Play</a></li>
+          <li><a href="serverinfo.html">Server info</a></li>
+          <li class="site-nav__group">
+            <button type="button" class="site-nav__disclosure" aria-expanded="false" aria-controls="nav-community" data-disclosure>Community <svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></button>
+            <ul class="site-nav__sub" id="nav-community" hidden>
+              <li><a href="highscores.html">Highscores<span>Top characters by skill</span></a></li>
+              <li><a href="online.html">Who's online<span>Everyone playing now</span></a></li>
+              <li><a href="deaths.html">Latest deaths<span>Recent deaths in the realm</span></a></li>
+              <li><a href="character.html">Find a character<span>Look up any player</span></a></li>
+              <li><a href="news.html">News<span>Updates from the server</span></a></li>
+            </ul>
+          </li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="donate.html" aria-current="page">Donate</a></li>
+        </ul>
+        <div class="site-nav__actions">
+          <button type="button" class="btn btn--ghost btn--sm" data-open="login">Log in</button>
+          <button type="button" class="btn btn--primary btn--sm" data-open="register">Create account</button>
+        </div>
+      </nav>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+        <svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg><span class="sr-only">Menu</span>
+      </button>
+    </div>
+  </header>
+</div>
+<main id="main" tabindex="-1">
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero__text">
+      <p class="eyebrow">Donate</p>
+      <h1>Donate &amp; buy Premium</h1>
+      <p class="lede">Automated web shop purchases are offline. All premium scroll orders are handled manually by the administration to ensure secure processing.</p>
+    </div>
+    <div class="page-hero__art"><img class="mascot mascot--lg" src="img/mascot-boat.svg" width="240" height="250" alt="Premium cruise!"></div>
+  </div>
+</section>
 
-  </main>
+<section class="band" id="how-to-order" aria-labelledby="order-title">
+  <div class="container">
+    <div class="card card--raised frame stack">
+      <div class="section-head"><div class="section-head__text"><p class="eyebrow">Step by step</p><h2 id="order-title">How to order</h2></div></div>
+      <ol class="timeline">
+        <li class="step"><span class="step__num">1</span><div class="step__body"><h3>Contact GM BubbaGame in game</h3><p>Contact me in game, GM BubbaGame. This can only be done when I'm online.</p></div></li>
+        <li class="step"><span class="step__num">2</span><div class="step__body"><h3>Choose how to pay</h3><p>You can pay via the methods below. Perhaps other ways too &ndash; ask me!</p></div></li>
+        <li class="step"><span class="step__num">3</span><div class="step__body"><h3>Get it in person</h3><p>I will come to you personally.</p></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
 
-  <footer class="wrap">
-    &copy; BubbaGame &middot; Watch live on <a href="https://twitch.tv/BubbaGame" rel="noopener">Twitch</a>
-  </footer>
+<section class="band band--alt" id="payment" aria-labelledby="payment-title">
+  <div class="container stack">
+    <div class="section-head"><div class="section-head__text"><p class="eyebrow">Payment</p><h2 id="payment-title">Contact BubbaGame for purchase</h2><p class="lede">You can pay via:</p></div></div>
+    <div class="grid-3">
+      <div class="pay-card pay-card--green"><h3>Tibia Coins (Real Tibia)</h3></div>
+      <div class="pay-card pay-card--gold"><h3>Crypto</h3></div>
+      <div class="pay-card pay-card--twitch"><h3>Twitch Subscriptions/Donations</h3>
+        <a class="btn btn--twitch btn--sm" href="https://twitch.tv/BubbaGame" rel="noopener">BubbaGame on Twitch</a></div>
+    </div>
+    <p>Perhaps other ways too &ndash; ask me!</p>
+    <div class="callout callout--ember">
+      <svg class="icon" aria-hidden="true"><use href="#i-alert"/></svg>
+      <div><b>Important:</b> Contact me in game, <b>GM BubbaGame</b>, and I will come to you personally (can only be done when I'm online).</div>
+    </div>
+  </div>
+</section>
 
-  <dialog id="login-dialog" aria-labelledby="login-title">
-    <button type="button" class="dialog-close" aria-label="Close">&times;</button>
-    <h2 id="login-title">Login to your account</h2>
-    <form method="post" action="login.php">
-      <label>Account number<input type="text" name="account_number" inputmode="numeric" autocomplete="username" required></label>
-      <label>Password<input type="password" name="password" autocomplete="current-password" required></label>
-      <button type="submit" class="btn">Login</button>
-    </form>
-  </dialog>
+<section class="band" id="what-can-i-buy" aria-labelledby="buy-title">
+  <div class="container stack">
+    <div class="section-head"><div class="section-head__text"><p class="eyebrow">Shop</p><h2 id="buy-title">What can I buy?</h2></div>
+      <div class="section-head__aside"><a href="shop.html">See all shop items &rarr;</a></div></div>
+    <div class="price-grid">
+  <div class="price-tile"><h3>30 Days</h3><p class="price-tile__price">50 SEK</p><p class="price-tile__approx">(~&euro;4.50)</p></div>
+  <div class="price-tile"><h3>90 Days</h3><p class="price-tile__price">150 SEK</p><p class="price-tile__approx">(~&euro;13.50)</p></div>
+  <div class="price-tile"><h3>180 Days</h3><p class="price-tile__price">300 SEK</p><p class="price-tile__approx">(~&euro;27)</p></div>
+</div>
+    <div><a class="btn btn--ghost" href="index.html">&larr; Back to homepage</a></div>
+  </div>
+</section>
+</main>
 
-  <dialog id="register-dialog" aria-labelledby="register-title">
-    <button type="button" class="dialog-close" aria-label="Close">&times;</button>
-    <h2 id="register-title">Create your account</h2>
-    <form method="post" action="create.php">
-      <label>Desired account number (numbers only)<input type="text" name="account_number" inputmode="numeric" pattern="[0-9]+" autocomplete="username" required></label>
-      <label>Password<input type="password" name="password" autocomplete="new-password" required></label>
-      <label>Email (optional)<input type="email" name="email" autocomplete="email"></label>
-      <button type="submit" class="btn">Register account</button>
-    </form>
-  </dialog>
+<footer class="site-footer">
+  <img class="mascot mascot--sm site-footer__peek" src="img/mascot-cyclops.svg" width="230" height="260" alt="" loading="lazy">
+  <div class="container site-footer__grid">
+    <div class="site-footer__brand">
+      <a class="brand" href="index.html"><img src="favicon.png" width="36" height="36" alt=""><span class="brand__name">BubbaGame</span></a>
+      <p class="eyebrow">A Realm Reborn</p>
+      <p>Found a bug? Report it to GM BubbaGame in-game or on Discord.</p>
+      <!-- CONFIRM: non-affiliation wording with the owner -->
+      <p class="small">BubbaGame is a fan-run server and is not affiliated with CipSoft GmbH.</p>
+    </div>
+    <nav aria-label="Play"><h2 class="site-footer__title">Play</h2><ul>
+      <li><a href="play.html">Download &amp; guide</a></li><li><a href="serverinfo.html">Server info</a></li>
+      <li><a href="serverinfo.html#faq">Rules &amp; FAQ</a></li><li><a href="shop.html">Shop</a></li><li><a href="donate.html">Donate</a></li></ul></nav>
+    <nav aria-label="Community"><h2 class="site-footer__title">Community</h2><ul>
+      <li><a href="highscores.html">Highscores</a></li><li><a href="online.html">Who's online</a></li>
+      <li><a href="deaths.html">Latest deaths</a></li><li><a href="character.html">Find a character</a></li>
+      <li><a href="news.html">News</a></li><li><a href="https://twitch.tv/BubbaGame" rel="noopener">Watch on Twitch</a></li>
+      <!-- CONFIRM: Discord invite URL -->
+      <li><a class="is-placeholder" href="#discord" data-toast="Discord invite link not provided yet.">Discord</a> <span class="sample-tag">Link needed</span></li></ul></nav>
+    <div><h2 class="site-footer__title">Server</h2>
+      <div class="ipbox ipbox--compact"><code>95.179.145.195</code><button type="button" class="copy-btn" data-copy="95.179.145.195" data-copy-label="IP">Copy</button></div>
+      <ul class="site-footer__facts"><li>Version 7.72 (7.4 server)</li><li>EU hosted</li><li>Daily serversave 07:00 server time</li></ul></div>
+  </div>
+  <div class="container site-footer__bottom">
+    <span>&copy; BubbaGame</span><span>Live numbers on this preview are sample data.</span><span>Site preview by Four Corners Games</span>
+  </div>
+</footer>
 
-  <script src="js/main.js"></script>
-</body>
-</html>
+<dialog class="dialog" id="login-dialog" aria-labelledby="login-title">
+  <button type="button" class="dialog__close" data-close aria-label="Close"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button>
+  <h2 id="login-title">Log in to your account</h2>
+  <form class="form" method="post" action="login.php" data-demo-form>
+    <label class="field">Account number<input type="text" name="account_number" inputmode="numeric" autocomplete="username" required></label>
+    <label class="field">Password<input type="password" name="password" autocomplete="current-password" required></label>
+    <button type="submit" class="btn btn--primary btn--block">Log in</button>
+    <p class="small">No account yet? <button type="button" class="link-btn" data-open="register">Create one</button></p>
+  </form>
+</dialog>
+<dialog class="dialog" id="register-dialog" aria-labelledby="register-title">
+  <button type="button" class="dialog__close" data-close aria-label="Close"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button>
+  <h2 id="register-title">Create your account</h2>
+  <form class="form" method="post" action="create.php" data-demo-form>
+    <label class="field">Desired account number (numbers only)<input type="text" name="account_number" inputmode="numeric" pattern="[0-9]+" autocomplete="username" required></label>
+    <label class="field">Password<input type="password" name="password" autocomplete="new-password" required></label>
+    <label class="field">Email (optional)<input type="email" name="email" autocomplete="email"></label>
+    <button type="submit" class="btn btn--primary btn--block">Register account</button>
+    <p class="small">Already have one? <button type="button" class="link-btn" data-open="login">Log in</button></p>
+  </form>
+</dialog>
+<div id="live" class="sr-only" aria-live="polite"></div>
+<div class="toast-region" aria-live="polite"></div>
+</body></html>

@@ -5,255 +5,210 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
   <title>BubbaGame – A Realm Reborn</title>
-  <meta name="description" content="BubbaGame is a 7.4 Tibia server played on the 7.72 client. 2x experience, botting allowed, no wipe planned.">
-  <meta name="theme-color" content="#120d24">
+  <meta name="description" content="BubbaGame is a 7.4 Tibia server played on the 7.72 client, with classic gameplay and a few custom twists. 2x experience, EU hosted, no wipe planned.">
+  <meta name="theme-color" content="#0d0517">
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="apple-touch-icon" href="favicon.png">
+  <link rel="preload" href="fonts/baloo2.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
 </head>
 <body>
-  <a class="skip" href="#main">Skip to content</a>
-
-  <header class="wrap hero">
-    <a href="index.html"><img src="img/banner.jpg" width="1960" height="600" alt="BubbaGame.online – A Realm Reborn. Server 7.4, EU, 7.72 client. 2x EXP, 1x rest." fetchpriority="high"></a>
-    <nav class="nav" aria-label="Main">
-      <a href="index.html" aria-current="page">Home</a>
-      <a href="shop.html">Item Shop &amp; Premium</a>
-      <a href="donate.html">Donate</a>
-      <span class="spacer"></span>
-      <button type="button" data-open="login">Login</button>
-      <button type="button" class="cta" data-open="register">Create Account</button>
-    </nav>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="masthead" data-masthead>
+  <div class="topbar" role="region" aria-label="Server status">
+    <div class="container topbar__inner">
+      <span class="status"><span class="status-dot" aria-hidden="true"></span>Online</span>
+      <span class="topbar__item"><b class="topbar__num">24</b> players online</span>
+      <span class="topbar__item topbar__hide-md">Serversave in <b data-countdown="07:00">--:--:--</b></span>
+      <span class="sample-tag">Sample</span>
+      <span class="topbar__spacer"></span>
+      <span class="topbar__item topbar__ip"><span class="topbar__hide-xs">IP <code>95.179.145.195</code></span>
+        <button type="button" class="copy-btn" data-copy="95.179.145.195" data-copy-label="IP">Copy<span class="topbar__show-xs"> IP</span></button></span>
+      <span class="topbar__item topbar__hide-md">Version 7.72</span>
+      <a class="topbar__item topbar__hide-md" href="https://twitch.tv/BubbaGame" rel="noopener">Twitch</a>
+    </div>
+  </div>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html"><img src="favicon.png" width="36" height="36" alt=""><span class="brand__name">BubbaGame</span></a>
+      <nav class="site-nav" id="site-nav" aria-label="Main" data-nav>
+        <ul class="site-nav__list">
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="play.html">Play</a></li>
+          <li><a href="serverinfo.html">Server info</a></li>
+          <li class="site-nav__group">
+            <button type="button" class="site-nav__disclosure" aria-expanded="false" aria-controls="nav-community" data-disclosure>Community <svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></button>
+            <ul class="site-nav__sub" id="nav-community" hidden>
+              <li><a href="highscores.html">Highscores<span>Top characters by skill</span></a></li>
+              <li><a href="online.html">Who's online<span>Everyone playing now</span></a></li>
+              <li><a href="deaths.html">Latest deaths<span>Recent deaths in the realm</span></a></li>
+              <li><a href="character.html">Find a character<span>Look up any player</span></a></li>
+              <li><a href="news.html">News<span>Updates from the server</span></a></li>
+            </ul>
+          </li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="donate.html">Donate</a></li>
+        </ul>
+        <div class="site-nav__actions">
+          <button type="button" class="btn btn--ghost btn--sm" data-open="login">Log in</button>
+          <button type="button" class="btn btn--primary btn--sm" data-open="register">Create account</button>
+        </div>
+      </nav>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+        <svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg><span class="sr-only">Menu</span>
+      </button>
+    </div>
   </header>
+</div>
+<main id="main" tabindex="-1">
 
-  <main id="main" class="wrap">
-
-    <section aria-labelledby="welcome">
-      <h1 id="welcome">Welcome!</h1>
-      <p class="lead"><b>BubbaGame</b> is a 7.4 Tibia server played on the 7.72 client, with classic gameplay and a few custom twists. The server is now <span class="live">LIVE</span> and (allegedly) running.</p>
-      <ul class="stats" aria-label="Server at a glance">
-        <li><b>2x</b> experience</li>
-        <li><b>1x</b> everything else</li>
-        <li><b>EU</b> hosted</li>
-        <li>Botting <b>allowed</b></li>
-        <li><b>No wipe</b> planned</li>
-      </ul>
-      <p class="cta-row">
-        <button type="button" class="btn big" data-open="register">Play now &ndash; create account</button>
-        <a class="btn alt big" href="https://twitch.tv/BubbaGame" rel="noopener">&#9654; Watch live on Twitch</a>
-        <button type="button" class="btn ghost big" data-toast="The Discord invite link goes here.">Join Discord</button>
-      </p>
-    </section>
-
-    <section class="statusbar" aria-label="Server status">
-      <div class="status-main"><span class="dot" aria-hidden="true"></span><b>Online</b></div>
-      <div><b>47</b> players online</div>
-      <div>Uptime <b>3d 14h</b></div>
-      <div>Serversave in <b id="countdown" data-hour="7">--:--:--</b></div>
-      <span class="sample" title="Placeholder numbers for this preview">Sample data</span>
-    </section>
-
-    <section class="panel" aria-labelledby="steps">
-      <h2 id="steps">Start playing in 3 steps</h2>
-      <ol class="steps">
-        <li>
-          <span class="n">1</span>
-          <div><h3>Create an account</h3><p class="muted">Pick an account number and a password. Email is optional.</p>
-          <button type="button" class="btn small" data-open="register">Create account</button></div>
-        </li>
-        <li>
-          <span class="n">2</span>
-          <div><h3>Download a client</h3><p class="muted">Classic Tibia 7.72, or OTClient v8 with a built-in bot and WASD.</p>
-          <a class="btn small" href="#clients">Choose a client</a></div>
-        </li>
-        <li>
-          <span class="n">3</span>
-          <div><h3>Connect</h3><p class="muted">Server IP, version <code>772</code>:</p>
-          <div class="ipbox"><code id="server-ip">95.179.145.195</code><button type="button" class="btn small alt" id="copy-ip">Copy</button></div></div>
-        </li>
-      </ol>
-    </section>
-
-    <section class="widgets" aria-label="Live from the server">
-      <div class="panel">
-        <h2>Top players <span class="sample">Sample data</span></h2>
-        <table class="list">
-          <thead><tr><th>#</th><th>Name</th><th>Vocation</th><th class="r">Level</th></tr></thead>
-          <tbody>
-            <tr><td class="rank">1</td><td><a href="#">Bubba Prime</a></td><td>Knight</td><td class="r">118</td></tr>
-            <tr><td class="rank">2</td><td><a href="#">Mystic Moss</a></td><td>Druid</td><td class="r">112</td></tr>
-            <tr><td class="rank">3</td><td><a href="#">Sir Toasty</a></td><td>Paladin</td><td class="r">107</td></tr>
-            <tr><td class="rank">4</td><td><a href="#">Zap Brannigan</a></td><td>Sorcerer</td><td class="r">104</td></tr>
-            <tr><td class="rank">5</td><td><a href="#">Grim Wobble</a></td><td>Knight</td><td class="r">99</td></tr>
-          </tbody>
-        </table>
-        <p class="muted"><a href="#">Full highscores &rarr;</a></p>
-      </div>
-      <div class="panel">
-        <h2>Who&#39;s online <span class="sample">Sample data</span></h2>
-        <ul class="online">
-          <li><span class="dot sm" aria-hidden="true"></span><a href="#">Bubba Prime</a><span>Knight &middot; 118</span></li>
-          <li><span class="dot sm" aria-hidden="true"></span><a href="#">Sir Toasty</a><span>Paladin &middot; 107</span></li>
-          <li><span class="dot sm" aria-hidden="true"></span><a href="#">Pixel Pete</a><span>Druid &middot; 76</span></li>
-          <li><span class="dot sm" aria-hidden="true"></span><a href="#">Dragon Dan</a><span>Knight &middot; 64</span></li>
-          <li><span class="dot sm" aria-hidden="true"></span><a href="#">Little Lumi</a><span>Sorcerer &middot; 41</span></li>
-          <li><span class="dot sm" aria-hidden="true"></span><a href="#">Noob Saibot</a><span>Paladin &middot; 12</span></li>
-        </ul>
-        <p class="muted"><a href="#">See all 47 &rarr;</a></p>
-      </div>
-      <div class="panel">
-        <h2>Latest deaths <span class="sample">Sample data</span></h2>
-        <ul class="deaths">
-          <li><a href="#">Pixel Pete</a> (76) died to a dragon lord<time>12 min ago</time></li>
-          <li><a href="#">Dragon Dan</a> (64) died to a giant spider<time>31 min ago</time></li>
-          <li><a href="#">Noob Saibot</a> (12) died to a troll<time>1 h ago</time></li>
-          <li><a href="#">Little Lumi</a> (41) died to a necromancer<time>2 h ago</time></li>
-          <li><a href="#">Grim Wobble</a> (99) died to a demon<time>3 h ago</time></li>
-        </ul>
-        <p class="muted"><a href="#">More deaths &rarr;</a></p>
-      </div>
-    </section>
-
-    <section class="panel search" aria-labelledby="find">
-      <h2 id="find">Find a character</h2>
-      <form class="find-form" id="find-form" role="search">
-        <label class="sr" for="find-name">Character name</label>
-        <input id="find-name" type="text" placeholder="Character name" autocomplete="off" required>
-        <button type="submit" class="btn">Search</button>
-      </form>
-    </section>
-
-    <section aria-labelledby="news">
-      <h2 id="news">News <span class="sample">Sample data</span></h2>
-      <div class="news-grid">
-        <article class="panel">
-          <time>Today</time>
-          <h3>The server is LIVE</h3>
-          <p class="muted">Classic 7.4 gameplay on the 7.72 client, 2x experience and no wipe planned. Create your account and jump in.</p>
-        </article>
-        <article class="panel">
-          <time>This week</time>
-          <h3>Daily serversave</h3>
-          <p class="muted">Logins are blocked for five minutes before the 07:00 serversave. The server is back about a minute later.</p>
-        </article>
-        <article class="panel">
-          <time>Good to know</time>
-          <h3>Premium Days &amp; the item shop</h3>
-          <p class="muted">Premium Days and shop items are ordered through the admin. See the <a href="donate.html">Donate page</a> for how.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="panel" aria-labelledby="clients">
-      <h2 id="clients">Which client should I use?</h2>
-      <p>You can choose between two game clients. Pick the one that suits how you play.</p>
-      <div class="grid-clients">
-        <div class="card">
-          <h3>1. Tibia 7.72 &ndash; the classic client</h3>
-          <ul>
-            <li>The original Tibia experience.</li>
-            <li>Recommended if you play by hand.</li>
-            <li>Stable and lightweight.</li>
-          </ul>
-          <a class="btn" href="https://www.mediafire.com/file/wkk4c5mt3vztbk2/Tibia772.zip/file" rel="noopener">&#11015; Download Tibia 7.72</a>
+<!-- 1. Hero stage -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero__sky" aria-hidden="true"></div>
+  <!-- placeholder scenery -->
+  <svg class="hero__mountains" viewBox="0 0 1440 180" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+    <path fill="#2a0f38" d="M0 180L0 100L90 55L160 95L270 30L370 90L460 50L580 100L660 60L790 105L900 45L990 85L1110 25L1210 80L1300 55L1440 95L1440 180Z"/>
+    <path fill="#0d0517" d="M0 180L0 140L120 100L200 135L340 85L450 130L600 95L720 140L860 100L980 135L1100 90L1230 130L1340 105L1440 135L1440 180Z"/>
+  </svg>
+  <div class="container hero__inner">
+    <img class="hero__banner" src="img/banner.jpg" width="1960" height="600" fetchpriority="high" alt="BubbaGame online – a realm reborn. 2x EXP, 1x rest, server 7.4.">
+    <div class="hero-dock card card--raised frame">
+      <div class="hero-dock__text">
+        <p class="eyebrow">Tibia 7.4 &middot; 7.72 client &middot; EU</p>
+        <h1 class="display" id="hero-title">Classic 7.4 Tibia, with a few custom twists.</h1>
+        <p class="lede">BubbaGame is a 7.4 Tibia server played on the 7.72 client, with classic gameplay and a few custom twists. The server is now <span class="pill pill--green">LIVE</span> and (allegedly) running.</p>
+        <div class="pill-row">
+          <span class="pill pill--green" style="--i:0">2x EXP</span>
+          <span class="pill pill--pink" style="--i:1">1x everything else</span>
+          <span class="pill pill--violet" style="--i:2">Faster spawns</span>
+          <span class="pill pill--gold" style="--i:3">Botting allowed</span>
+          <span class="pill pill--night" style="--i:4">No wipe planned</span>
         </div>
-        <div class="card">
-          <h3>2. OTClient v8 &ndash; built-in bot and WASD</h3>
-          <ul>
-            <li>Botting is allowed on BubbaGame.</li>
-            <li>Comes with a bot, smart walking and WASD movement built in.</li>
-            <li>Also the client to use if you want to watch someone&#39;s cast.</li>
-          </ul>
-          <a class="btn" href="https://www.mediafire.com/file/q5s1jmlyd6j3zwf/v8_client_tibia.rar/file" rel="noopener">&#11015; Download v8 client</a>
-          <p class="ip-note">Set the IP to <code>95.179.145.195</code> and the version to <code>772</code>.</p>
+        <div class="hero-dock__cta">
+          <button type="button" class="btn btn--primary btn--lg" data-open="register">Play now &ndash; create account</button>
+          <a class="btn btn--ghost btn--lg" href="play.html#clients">Download a client</a>
+          <a href="https://twitch.tv/BubbaGame" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-play"/></svg>Watch live on Twitch</a>
         </div>
       </div>
-      <img class="mascot-solo" src="img/mascot-download.svg" width="210" height="150" alt="Download here!">
-    </section>
-
-    <section class="panel" aria-labelledby="map">
-      <div class="with-mascot">
-        <div>
-          <h2 id="map">Full map (optional)</h2>
-          <p>Don&#39;t want to explore the whole world yourself? Download the full map for your client:</p>
-          <p>
-            <a class="btn small" href="https://www.mediafire.com/file/om2coxvx3z4rij2/772_FULL_MAP.zip/file" rel="noopener">Full Map for 7.72 Client</a>
-            <a class="btn small alt" href="https://www.mediafire.com/file/4lx89uqsg03e2qa/V8_FULL_MAP.zip/file" rel="noopener">Full Map for v8 Client</a>
-          </p>
-          <p class="muted"><em>Close your client first, then:</em> <b>7.72:</b> unzip the files into your 7.72 client folder. <b>v8:</b> put the <b>.otmm</b> file in <code>%APPDATA%\OTClientV8\otclientv8</code> (paste that into the Explorer address bar).</p>
-        </div>
-        <img src="img/mascot-map.svg" width="170" height="140" alt="Where am I?!" loading="lazy">
-      </div>
-      <details>
-        <summary>v8 map reset itself?</summary>
-        <p class="muted">The v8 client saves the map file when you log out, so a crash or a lost connection during the daily server restart can overwrite it. Keep a copy of the <b>.otmm</b> file somewhere safe and just paste it back if your map is gone. To stop it from ever being overwritten, right-click the <b>.otmm</b> file &rarr; <b>Properties</b> &rarr; tick <b>Read-only</b> (new areas you explore will then not be saved until you untick it).</p>
-      </details>
-    </section>
-
-    <section class="panel" aria-labelledby="lag">
-      <div class="with-mascot">
-        <div>
-          <h2 id="lag">Still not smooth? A few PC settings that often help the old client</h2>
-          <ul class="tips">
-            <li><b>Stuttering?</b> Make a shortcut to Tibia.exe &rarr; right-click &rarr; <b>Properties</b> &rarr; in <b>Target</b> add <b>engine 1</b> at the very end, after the closing quote: <code>"C:\Games\Tibia772\Tibia.exe" engine 1</code></li>
-            <li><b>Turn off V-Sync for Tibia:</b> NVIDIA Control Panel &rarr; Manage 3D settings &rarr; Program Settings &rarr; add Tibia.exe &rarr; Vertical sync: Off. (AMD: Adrenalin &rarr; Gaming &rarr; Tibia &rarr; Wait for Vertical Refresh: Off.)</li>
-            <li><b>Use your graphics card:</b> Windows Settings &rarr; System &rarr; Display &rarr; Graphics &rarr; add Tibia.exe &rarr; Options &rarr; High performance.</li>
-            <li><b>Disable fullscreen optimizations:</b> right-click Tibia.exe &rarr; Properties &rarr; Compatibility &rarr; tick &quot;Disable fullscreen optimizations&quot;.</li>
-            <li><b>Streaming with OBS?</b> Use Window Capture instead of Game Capture for the 7.72 client.</li>
-          </ul>
-        </div>
-        <img src="img/mascot-warlock.svg" width="170" height="150" alt="Begone, lag!" loading="lazy">
-      </div>
-      <img class="shot" src="img/engine.jpg" width="187" height="18" alt="Add engine 1 to the shortcut target" loading="lazy">
-    </section>
-
-    <div class="grid-2">
-      <section class="panel" aria-labelledby="newhere">
-        <div class="with-mascot">
-          <div>
-            <h2 id="newhere">New here?</h2>
-            <p><b>Need help or want to chat?</b> Open the <b>Game Chat</b> channel in-game to talk with other players, ask questions and share what you know.</p>
-            <p><b>Tasks:</b> You can find tasks at any post office NPC.</p>
+      <div class="hero-dock__aside">
+        <div class="pulse">
+          <div class="pulse__head"><span class="status"><span class="status-dot" aria-hidden="true"></span>Online</span><span class="sample-tag">Sample data</span></div>
+          <p class="pulse__big"><b>24</b><span>players online</span></p>
+          <dl class="pulse__grid">
+            <div><dt>Uptime</dt><dd>3d 14h</dd></div>
+            <div><dt>Serversave</dt><dd>07:00</dd></div>
+            <div><dt>Next save in</dt><dd data-countdown="07:00">--:--:--</dd></div>
+            <div><dt>Location</dt><dd>EU</dd></div>
+          </dl>
+          <div class="pulse__foot">
+            <div class="ipbox ipbox--compact"><code>95.179.145.195</code><button type="button" class="copy-btn" data-copy="95.179.145.195" data-copy-label="IP">Copy</button></div>
+            <span class="faint">Version 772</span>
           </div>
-          <img src="img/mascot-cyclops.svg" width="130" height="130" alt="Welcome, newbie!" loading="lazy">
         </div>
-        <p><b>Looking for someone?</b> Everything is in-game:</p>
-        <table class="cmds">
-          <tr><td><code>!character "name</code></td><td>level, vocation, city and guild</td></tr>
-          <tr><td><code>!deathlist "name</code></td><td>recent deaths</td></tr>
-          <tr><td><code>!highscore</code></td><td>top 50 (add <code>"magic</code>, <code>"sword</code> &hellip;)</td></tr>
-          <tr><td><code>!guildlist</code></td><td>all guilds</td></tr>
-          <tr><td><code>!guildinfo "name</code></td><td>members of a guild</td></tr>
-        </table>
-        <p>Type <code>!commands</code> in-game for the full list. The most useful ones:</p>
-        <ul class="checklist">
-          <li><b>!online</b> &ndash; who is playing right now</li>
-          <li><b>!tasklist</b> &ndash; every kill task, <b>!task</b> shows your current one</li>
-          <li><b>!highscore</b> and <b>!character "name</b> &ndash; top lists and character info</li>
-          <li><b>!serverinfo</b> and <b>!uptime</b> &ndash; server rates and uptime</li>
-          <li><b>!kills</b> and <b>!deathlist</b> &ndash; your frags and recent deaths</li>
-          <li><b>!guild</b> &ndash; found a guild, <b>!buyhouse</b> while facing a house door</li>
-          <li><b>!share</b> &ndash; toggle experience sharing in a party</li>
-          <li><b>!cast</b> &ndash; stream your gameplay to other players</li>
-        </ul>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
 
+<!-- 2. Start in 3 steps -->
+<section class="band" aria-labelledby="steps-title">
+  <div class="container">
+    <div class="section-head"><div class="section-head__text"><p class="eyebrow">Get started</p><h2 id="steps-title">Start playing in 3 steps</h2></div></div>
+    <ol class="steps">
+      <li class="step"><span class="step__num">1</span><div class="step__body"><h3>Create an account</h3><p>Pick an account number and a password. Email is optional.</p><button type="button" class="btn btn--primary btn--sm" data-open="register">Create account</button></div></li>
+      <li class="step"><span class="step__num">2</span><div class="step__body"><h3>Download a client</h3><p>Classic Tibia 7.72, or OTClient v8 with a built-in bot and WASD.</p><a class="btn btn--ghost btn--sm" href="play.html#clients">Choose a client</a></div>
+        <img class="mascot mascot--sm mascot--peek" src="img/mascot-download.svg" width="300" height="240" alt="Download here!" loading="lazy"></li>
+      <li class="step"><span class="step__num">3</span><div class="step__body"><h3>Connect</h3><p>Server IP, version 772:</p><div class="ipbox"><code>95.179.145.195</code><button type="button" class="copy-btn" data-copy="95.179.145.195" data-copy-label="IP">Copy</button></div></div></li>
+    </ol>
+  </div>
+</section>
+
+<!-- 3. Live from the realm [SAMPLE] -->
+<section class="band band--alt" aria-labelledby="live-title">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-head__text"><p class="eyebrow">Community</p><h2 id="live-title">Live from the realm</h2></div>
+      <div class="section-head__aside">
+        <form class="search" role="search" action="character.html" method="get">
+          <label class="sr-only" for="home-search">Character name</label>
+          <input id="home-search" type="search" name="name" placeholder="Character name" autocomplete="off">
+          <button type="submit" class="btn btn--violet">Search</button>
+        </form>
+      </div>
+    </div>
+    <div class="live-grid">
+      <section class="card" aria-labelledby="top-title">
+        <div class="card__head"><h3 id="top-title">Top players</h3><span class="sample-tag">Sample data</span><a class="card__link" href="highscores.html">Full highscores &rarr;</a></div>
+        <div class="podium">
+          <div class="podium__spot podium__spot--1"><span class="medal">1</span><a class="podium__name" href="character.html?name=Brave%20Barnaby">Brave Barnaby</a><span class="voc-badge voc-badge--knight" title="Knight"><span aria-hidden="true">K</span><span class="sr-only">Knight</span></span><span class="podium__level">Level 118</span></div>
+          <div class="podium__spot podium__spot--2"><span class="medal">2</span><a class="podium__name" href="character.html?name=Mystic%20Moss">Mystic Moss</a><span class="voc-badge voc-badge--druid" title="Druid"><span aria-hidden="true">D</span><span class="sr-only">Druid</span></span><span class="podium__level">Level 112</span></div>
+          <div class="podium__spot podium__spot--3"><span class="medal">3</span><a class="podium__name" href="character.html?name=Sir%20Toasty">Sir Toasty</a><span class="voc-badge voc-badge--paladin" title="Paladin"><span aria-hidden="true">P</span><span class="sr-only">Paladin</span></span><span class="podium__level">Level 107</span></div>
+        </div>
+        <ol class="rank-list" start="4">
+          <li><span class="rank">4</span><a href="character.html?name=Zap%20Sparkwell">Zap Sparkwell</a><span class="voc-badge voc-badge--sorcerer" title="Sorcerer"><span aria-hidden="true">S</span><span class="sr-only">Sorcerer</span></span><span class="rank-list__value">104</span></li>
+          <li><span class="rank">5</span><a href="character.html?name=Grim%20Wobble">Grim Wobble</a><span class="voc-badge voc-badge--knight" title="Knight"><span aria-hidden="true">K</span><span class="sr-only">Knight</span></span><span class="rank-list__value">99</span></li>
+        </ol>
+      </section>
+      <section class="card" aria-labelledby="online-title">
+        <div class="card__head"><h3 id="online-title">Who&rsquo;s online</h3><span class="sample-tag">Sample data</span></div>
+        <ul class="feed feed--online">
+          <li><span class="status-dot status-dot--sm" aria-hidden="true"></span><a href="character.html?name=Brave%20Barnaby">Brave Barnaby</a><span class="feed__meta">Knight &middot; 118</span></li>
+          <li><span class="status-dot status-dot--sm" aria-hidden="true"></span><a href="character.html?name=Sir%20Toasty">Sir Toasty</a><span class="feed__meta">Paladin &middot; 107</span></li>
+          <li><span class="status-dot status-dot--sm" aria-hidden="true"></span><a href="character.html?name=Hazel%20Hex">Hazel Hex</a><span class="feed__meta">Sorcerer &middot; 95</span></li>
+          <li><span class="status-dot status-dot--sm" aria-hidden="true"></span><a href="character.html?name=Pixel%20Pete">Pixel Pete</a><span class="feed__meta">Druid &middot; 76</span></li>
+          <li><span class="status-dot status-dot--sm" aria-hidden="true"></span><a href="character.html?name=Dragon%20Dan">Dragon Dan</a><span class="feed__meta">Knight &middot; 64</span></li>
+          <li><span class="status-dot status-dot--sm" aria-hidden="true"></span><a href="character.html?name=Little%20Lumi">Little Lumi</a><span class="feed__meta">Sorcerer &middot; 41</span></li>
+        </ul>
+        <div class="card__foot"><a class="card__link" href="online.html">All 24 online &rarr;</a></div>
+      </section>
+      <section class="card" aria-labelledby="deaths-title">
+        <div class="card__head"><h3 id="deaths-title">Latest deaths</h3><span class="sample-tag">Sample data</span></div>
+        <ul class="feed feed--deaths">
+          <li><svg class="icon" aria-hidden="true"><use href="#i-skull"/></svg><p><a href="character.html?name=Pixel%20Pete"><b>Pixel Pete</b></a> (76) died to a dragon lord</p><time>12 min ago</time></li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-skull"/></svg><p><a href="character.html?name=Dragon%20Dan"><b>Dragon Dan</b></a> (64) died to a giant spider</p><time>31 min ago</time></li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-skull"/></svg><p><a href="character.html?name=Noob%20Noodle"><b>Noob Noodle</b></a> (12) died to a troll</p><time>1 h ago</time></li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-skull"/></svg><p><a href="character.html?name=Little%20Lumi"><b>Little Lumi</b></a> (41) died to a necromancer</p><time>2 h ago</time></li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-skull"/></svg><p><a href="character.html?name=Grim%20Wobble"><b>Grim Wobble</b></a> (99) died to a demon</p><time>3 h ago</time></li>
+        </ul>
+        <div class="card__foot"><a class="card__link" href="deaths.html">More deaths &rarr;</a></div>
+      </section>
+    </div>
+  </div>
+</section>
+
+<!-- 4. Server at a glance + 5. New here -->
+<section class="band" aria-labelledby="glance-title">
+  <div class="container">
+    <div class="section-head"><div class="section-head__text"><h2 id="glance-title">The server at a glance</h2></div><div class="section-head__aside"><a class="card__link" href="serverinfo.html">Full server info &amp; rules &rarr;</a></div></div>
+    <div class="stat-grid">
+      <div class="stat-tile"><span class="stat-tile__value is-green">2x</span><span class="stat-tile__label">Experience rate</span></div>
+      <div class="stat-tile"><span class="stat-tile__value is-pink">1x</span><span class="stat-tile__label">Everything else &middot; faster spawns</span></div>
+      <div class="stat-tile"><span class="stat-tile__value is-gold">3</span><span class="stat-tile__label">Accounts you may play &middot; botting allowed</span></div>
+      <div class="stat-tile"><span class="stat-tile__value is-cyan">07:00</span><span class="stat-tile__label">Daily serversave (server time)</span></div>
+      <div class="stat-tile"><span class="stat-tile__value is-violet">EU</span><span class="stat-tile__label">Hosted in Europe</span></div>
+      <div class="stat-tile"><span class="stat-tile__value is-cream">No wipe</span><span class="stat-tile__label">Planned &middot; your progress stays</span></div>
+    </div>
+    <div class="card newhere">
+      <img class="mascot mascot--md" src="img/mascot-cyclops.svg" width="230" height="260" alt="Welcome, newbie!" loading="lazy">
       <div>
-        <section class="panel" aria-labelledby="know">
-          <h2 id="know">Good to know</h2>
-          <ul class="checklist">
-            <li>Experience is 2x, everything else is 1x, and the spawn rate is faster than usual.</li>
-            <li>The server is EU-hosted.</li>
-            <li>Daily serversave at 07:00 server time &ndash; logins are blocked for the five minutes before it, and the server is back about a minute later.</li>
-            <li>Botting is allowed and you may play up to 3 accounts.</li>
-            <li>Premium days and shop items are bought under <a href="shop.html">Item Shop and Premium Days</a>.</li>
-            <li>No wipe is planned &ndash; your progress stays.</li>
-            <li><b>Found a bug?</b> Report it to GM BubbaGame in-game or on Discord.</li>
-          </ul>
-        </section>
-        <section class="panel" aria-labelledby="prem" style="margin-top:16px">
-          <h2 id="prem">Premium benefits</h2>
-          <ul class="checklist">
+        <h3>New here?</h3>
+        <p><b>Need help or want to chat?</b> Open the <b>Game Chat</b> channel in-game to talk with other players, ask questions and share what you know.</p>
+        <p><b>Tasks:</b> You can find tasks at any post office NPC.</p>
+        <div class="cluster"><a class="btn btn--primary btn--sm" href="play.html#first-steps">Read the guide</a><a class="btn btn--ghost btn--sm" href="serverinfo.html#commands">Commands</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. Premium teaser -->
+<section class="band band--alt" aria-labelledby="prem-title">
+  <div class="container">
+    <div class="card card--raised frame premium">
+      <div>
+        <p class="eyebrow">Premium</p>
+        <h2 id="prem-title">Premium benefits</h2>
+        <ul class="checklist checklist--2col">
             <li>Access to premium spells.</li>
             <li>Travel by boat.</li>
             <li>Buy and own a house.</li>
@@ -261,39 +216,113 @@
             <li>Loot window.</li>
             <li>Make runes without holding a blank rune in your hand.</li>
             <li>5% extra experience.</li>
-          </ul>
-          <img class="mascot-solo" src="img/mascot-boat.svg" width="210" height="140" alt="Premium cruise!" loading="lazy">
-        </section>
+        </ul>
+      </div>
+      <div class="premium__aside">
+        <img class="mascot mascot--lg" src="img/mascot-boat.svg" width="240" height="250" alt="Premium cruise!" loading="lazy">
+        <div class="cluster"><a class="btn btn--primary" href="shop.html">See the shop</a><a class="btn btn--ghost" href="donate.html">How to buy</a></div>
       </div>
     </div>
+  </div>
+</section>
 
-  </main>
+<!-- 7. News [SAMPLE] -->
+<section class="band" aria-labelledby="news-title">
+  <div class="container">
+    <div class="section-head"><div class="section-head__text"><p class="eyebrow">News</p><h2 id="news-title">Latest from the realm</h2></div><div class="section-head__aside"><a class="card__link" href="news.html">All news &rarr;</a></div></div>
+      <div class="news-strip">
+        <a class="news-strip__item" href="news.html#n1"><time>Example date</time><span>The server is live</span></a>
+        <a class="news-strip__item" href="news.html#n2"><time>Example date</time><span>Daily serversave at 07:00</span></a>
+        <a class="news-strip__item" href="news.html#n4"><time>Example date</time><span>Full map downloads</span></a>
+      </div>
+      <div class="grid-3">
+        <article class="news-card">
+          <p class="news-card__date"><time>Example date</time> <span class="sample-tag">Example post</span></p>
+          <h3>The server is live</h3>
+          <p>BubbaGame is a 7.4 Tibia server played on the 7.72 client, with classic gameplay and a few custom twists. 2x experience, 1x everything else, and no wipe planned.</p>
+          <a class="card__link" href="news.html#n1">Read more &rarr;</a>
+        </article>
+        <article class="news-card">
+          <p class="news-card__date"><time>Example date</time> <span class="sample-tag">Example post</span></p>
+          <h3>Daily serversave at 07:00</h3>
+          <p>Daily serversave at 07:00 server time &ndash; logins are blocked for the five minutes before it, and the server is back about a minute later.</p>
+          <a class="card__link" href="news.html#n2">Read more &rarr;</a>
+        </article>
+        <article class="news-card">
+          <p class="news-card__date"><time>Example date</time> <span class="sample-tag">Example post</span></p>
+          <h3>Premium Days &amp; the item shop</h3>
+          <p>Premium Days are used to buy everything in the shop. Orders are handled manually by the admin &ndash; see the Donate page for how.</p>
+          <a class="card__link" href="news.html#n3">Read more &rarr;</a>
+        </article>
+      </div>
+  </div>
+</section>
 
-  <footer class="wrap">
-    &copy; BubbaGame &middot; Watch live on <a href="https://twitch.tv/BubbaGame" rel="noopener">Twitch</a>
-  </footer>
+<!-- 8. Watch & talk -->
+<section class="band band--alt" aria-labelledby="talk-title">
+  <div class="container">
+    <div class="section-head"><div class="section-head__text"><p class="eyebrow">Community</p><h2 id="talk-title">Watch &amp; talk</h2></div></div>
+    <div class="grid-2">
+      <div class="card talk"><svg class="icon" aria-hidden="true"><use href="#i-stream"/></svg><div><h3>Twitch</h3><p>Watch BubbaGame live on Twitch.</p><a class="btn btn--twitch" href="https://twitch.tv/BubbaGame" rel="noopener">Watch live on Twitch</a></div></div>
+      <div class="card talk"><svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg><div><h3>Discord</h3><p>Report bugs to GM BubbaGame in-game or on Discord.</p>
+        <!-- CONFIRM: Discord invite URL -->
+        <a class="btn btn--ghost is-placeholder" href="#discord" data-toast="Discord invite link not provided yet.">Join Discord</a> <span class="sample-tag">Link needed</span></div></div>
+    </div>
+  </div>
+</section>
 
-  <dialog id="login-dialog" aria-labelledby="login-title">
-    <button type="button" class="dialog-close" aria-label="Close">&times;</button>
-    <h2 id="login-title">Login to your account</h2>
-    <form method="post" action="login.php">
-      <label>Account number<input type="text" name="account_number" inputmode="numeric" autocomplete="username" required></label>
-      <label>Password<input type="password" name="password" autocomplete="current-password" required></label>
-      <button type="submit" class="btn">Login</button>
-    </form>
-  </dialog>
+</main>
 
-  <dialog id="register-dialog" aria-labelledby="register-title">
-    <button type="button" class="dialog-close" aria-label="Close">&times;</button>
-    <h2 id="register-title">Create your account</h2>
-    <form method="post" action="create.php">
-      <label>Desired account number (numbers only)<input type="text" name="account_number" inputmode="numeric" pattern="[0-9]+" autocomplete="username" required></label>
-      <label>Password<input type="password" name="password" autocomplete="new-password" required></label>
-      <label>Email (optional)<input type="email" name="email" autocomplete="email"></label>
-      <button type="submit" class="btn">Register account</button>
-    </form>
-  </dialog>
 
-  <script src="js/main.js"></script>
-</body>
-</html>
+<footer class="site-footer">
+  <img class="mascot mascot--sm site-footer__peek" src="img/mascot-cyclops.svg" width="230" height="260" alt="" loading="lazy">
+  <div class="container site-footer__grid">
+    <div class="site-footer__brand">
+      <a class="brand" href="index.html"><img src="favicon.png" width="36" height="36" alt=""><span class="brand__name">BubbaGame</span></a>
+      <p class="eyebrow">A Realm Reborn</p>
+      <p>Found a bug? Report it to GM BubbaGame in-game or on Discord.</p>
+      <!-- CONFIRM: non-affiliation wording with the owner -->
+      <p class="small">BubbaGame is a fan-run server and is not affiliated with CipSoft GmbH.</p>
+    </div>
+    <nav aria-label="Play"><h2 class="site-footer__title">Play</h2><ul>
+      <li><a href="play.html">Download &amp; guide</a></li><li><a href="serverinfo.html">Server info</a></li>
+      <li><a href="serverinfo.html#faq">Rules &amp; FAQ</a></li><li><a href="shop.html">Shop</a></li><li><a href="donate.html">Donate</a></li></ul></nav>
+    <nav aria-label="Community"><h2 class="site-footer__title">Community</h2><ul>
+      <li><a href="highscores.html">Highscores</a></li><li><a href="online.html">Who's online</a></li>
+      <li><a href="deaths.html">Latest deaths</a></li><li><a href="character.html">Find a character</a></li>
+      <li><a href="news.html">News</a></li><li><a href="https://twitch.tv/BubbaGame" rel="noopener">Watch on Twitch</a></li>
+      <!-- CONFIRM: Discord invite URL -->
+      <li><a class="is-placeholder" href="#discord" data-toast="Discord invite link not provided yet.">Discord</a> <span class="sample-tag">Link needed</span></li></ul></nav>
+    <div><h2 class="site-footer__title">Server</h2>
+      <div class="ipbox ipbox--compact"><code>95.179.145.195</code><button type="button" class="copy-btn" data-copy="95.179.145.195" data-copy-label="IP">Copy</button></div>
+      <ul class="site-footer__facts"><li>Version 7.72 (7.4 server)</li><li>EU hosted</li><li>Daily serversave 07:00 server time</li></ul></div>
+  </div>
+  <div class="container site-footer__bottom">
+    <span>&copy; BubbaGame</span><span>Live numbers on this preview are sample data.</span><span>Site preview by Four Corners Games</span>
+  </div>
+</footer>
+
+<dialog class="dialog" id="login-dialog" aria-labelledby="login-title">
+  <button type="button" class="dialog__close" data-close aria-label="Close"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button>
+  <h2 id="login-title">Log in to your account</h2>
+  <form class="form" method="post" action="login.php" data-demo-form>
+    <label class="field">Account number<input type="text" name="account_number" inputmode="numeric" autocomplete="username" required></label>
+    <label class="field">Password<input type="password" name="password" autocomplete="current-password" required></label>
+    <button type="submit" class="btn btn--primary btn--block">Log in</button>
+    <p class="small">No account yet? <button type="button" class="link-btn" data-open="register">Create one</button></p>
+  </form>
+</dialog>
+<dialog class="dialog" id="register-dialog" aria-labelledby="register-title">
+  <button type="button" class="dialog__close" data-close aria-label="Close"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button>
+  <h2 id="register-title">Create your account</h2>
+  <form class="form" method="post" action="create.php" data-demo-form>
+    <label class="field">Desired account number (numbers only)<input type="text" name="account_number" inputmode="numeric" pattern="[0-9]+" autocomplete="username" required></label>
+    <label class="field">Password<input type="password" name="password" autocomplete="new-password" required></label>
+    <label class="field">Email (optional)<input type="email" name="email" autocomplete="email"></label>
+    <button type="submit" class="btn btn--primary btn--block">Register account</button>
+    <p class="small">Already have one? <button type="button" class="link-btn" data-open="login">Log in</button></p>
+  </form>
+</dialog>
+<div id="live" class="sr-only" aria-live="polite"></div>
+<div class="toast-region" aria-live="polite"></div>
+</body></html>

@@ -4,225 +4,391 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
-  <title>Item Shop – BubbaGame</title>
-  <meta name="description" content="Premium Days packs and the BubbaGame item shop catalog.">
-  <meta name="theme-color" content="#120d24">
+  <title>Item shop &amp; Premium Days – BubbaGame</title>
+  <meta name="description" content="Premium Days packs and the BubbaGame item shop catalog: 23 items, orders handled manually by the admin.">
+  <meta name="theme-color" content="#0d0517">
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="apple-touch-icon" href="favicon.png">
+  <link rel="preload" href="fonts/baloo2.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
 </head>
 <body>
-  <a class="skip" href="#main">Skip to content</a>
-
-  <header class="wrap hero">
-    <a href="index.html"><img src="img/banner.jpg" width="1960" height="600" alt="BubbaGame.online – A Realm Reborn. Server 7.4, EU, 7.72 client. 2x EXP, 1x rest." fetchpriority="high"></a>
-    <nav class="nav" aria-label="Main">
-      <a href="index.html">Home</a>
-      <a href="shop.html" aria-current="page">Item Shop &amp; Premium</a>
-      <a href="donate.html">Donate</a>
-      <span class="spacer"></span>
-      <button type="button" data-open="login">Login</button>
-      <button type="button" class="cta" data-open="register">Create Account</button>
-    </nav>
-  </header>
-
-  <main id="main" class="wrap">
-
-    <h1>Item Shop &amp; Premium Days</h1>
-
-    <div class="notice" role="note">
-      <strong>How ordering works right now:</strong> automated web shop purchases are offline &ndash; premium orders are handled manually by the admin.
-      See <a href="donate.html">Donate &amp; Buy Premium</a> for how to pay.
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="masthead" data-masthead>
+  <div class="topbar" role="region" aria-label="Server status">
+    <div class="container topbar__inner">
+      <span class="status"><span class="status-dot" aria-hidden="true"></span>Online</span>
+      <span class="topbar__item"><b class="topbar__num">24</b> players online</span>
+      <span class="topbar__item topbar__hide-md">Serversave in <b data-countdown="07:00">--:--:--</b></span>
+      <span class="sample-tag">Sample</span>
+      <span class="topbar__spacer"></span>
+      <span class="topbar__item topbar__ip"><span class="topbar__hide-xs">IP <code>95.179.145.195</code></span>
+        <button type="button" class="copy-btn" data-copy="95.179.145.195" data-copy-label="IP">Copy<span class="topbar__show-xs"> IP</span></button></span>
+      <span class="topbar__item topbar__hide-md">Version 7.72</span>
+      <a class="topbar__item topbar__hide-md" href="https://twitch.tv/BubbaGame" rel="noopener">Twitch</a>
     </div>
+  </div>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html"><img src="favicon.png" width="36" height="36" alt=""><span class="brand__name">BubbaGame</span></a>
+      <nav class="site-nav" id="site-nav" aria-label="Main" data-nav>
+        <ul class="site-nav__list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="play.html">Play</a></li>
+          <li><a href="serverinfo.html">Server info</a></li>
+          <li class="site-nav__group">
+            <button type="button" class="site-nav__disclosure" aria-expanded="false" aria-controls="nav-community" data-disclosure>Community <svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></button>
+            <ul class="site-nav__sub" id="nav-community" hidden>
+              <li><a href="highscores.html">Highscores<span>Top characters by skill</span></a></li>
+              <li><a href="online.html">Who's online<span>Everyone playing now</span></a></li>
+              <li><a href="deaths.html">Latest deaths<span>Recent deaths in the realm</span></a></li>
+              <li><a href="character.html">Find a character<span>Look up any player</span></a></li>
+              <li><a href="news.html">News<span>Updates from the server</span></a></li>
+            </ul>
+          </li>
+          <li><a href="shop.html" aria-current="page">Shop</a></li>
+          <li><a href="donate.html">Donate</a></li>
+        </ul>
+        <div class="site-nav__actions">
+          <button type="button" class="btn btn--ghost btn--sm" data-open="login">Log in</button>
+          <button type="button" class="btn btn--primary btn--sm" data-open="register">Create account</button>
+        </div>
+      </nav>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+        <svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg><span class="sr-only">Menu</span>
+      </button>
+    </div>
+  </header>
+</div>
+<main id="main" tabindex="-1">
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero__text">
+      <p class="eyebrow">Shop</p>
+      <h1>Item shop &amp; Premium Days</h1>
+      <p class="lede">Premium Days are used to buy everything in the shop below.</p>
+    </div>
+    <div class="page-hero__art"><img class="mascot mascot--lg" src="img/mascot-boat.svg" width="240" height="250" alt="Premium cruise!"></div>
+  </div>
+</section>
 
-    <section class="panel" aria-labelledby="packs" style="margin-bottom:28px">
-      <h2 id="packs">Premium Days</h2>
-      <p class="muted">Premium Days are used to buy everything in the shop below. Log in to buy Premium Days or see your balance.</p>
-      <div class="packs">
-        <div class="pack"><b>30 Days</b><span>50 SEK (~&euro;4.50)</span></div>
-        <div class="pack"><b>90 Days</b><span>150 SEK (~&euro;13.50)</span></div>
-        <div class="pack"><b>180 Days</b><span>300 SEK (~&euro;27)</span></div>
+<section class="band" aria-label="How ordering works">
+  <div class="container">
+    <div class="callout callout--gold frame">
+      <svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg>
+      <div class="stack">
+        <p><b>How ordering works right now:</b> automated web shop purchases are offline &ndash; premium orders are handled manually by the admin.</p>
+        <div><a class="btn btn--primary btn--sm" href="donate.html">How to order</a></div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <section aria-labelledby="catalog">
-      <h2 id="catalog">Shop items</h2>
-      <div class="filters" role="group" aria-label="Filter items by category">
-        <button type="button" class="chip" data-filter="all" aria-pressed="true">All</button>
-        <button type="button" class="chip" data-filter="Scrolls" aria-pressed="false">Scrolls</button>
-        <button type="button" class="chip" data-filter="Runes" aria-pressed="false">Runes</button>
-        <button type="button" class="chip" data-filter="Boxes &amp; Lamps" aria-pressed="false">Boxes &amp;amp; Lamps</button>
-        <button type="button" class="chip" data-filter="Gear" aria-pressed="false">Gear</button>
+<section class="band band--alt" id="premium-days" aria-labelledby="premium-days-title">
+  <div class="container stack">
+    <div class="section-head"><div class="section-head__text"><p class="eyebrow">Packs</p><h2 id="premium-days-title">Premium Days</h2></div></div>
+    <div class="price-grid">
+  <div class="price-tile"><h3>30 Days</h3><p class="price-tile__price">50 SEK</p><p class="price-tile__approx">(~&euro;4.50)</p></div>
+  <div class="price-tile"><h3>90 Days</h3><p class="price-tile__price">150 SEK</p><p class="price-tile__approx">(~&euro;13.50)</p></div>
+  <div class="price-tile"><h3>180 Days</h3><p class="price-tile__price">300 SEK</p><p class="price-tile__approx">(~&euro;27)</p></div>
+</div>
+    <p class="cluster">Log in to buy Premium Days or see your balance.
+      <button type="button" class="btn btn--ghost btn--sm" data-open="login">Log in</button>
+      <button type="button" class="btn btn--primary btn--sm" data-open="register">Create account</button></p>
+  </div>
+</section>
+
+<section class="band" id="catalog" aria-labelledby="catalog-title">
+  <div class="container stack">
+    <div class="section-head"><div class="section-head__text"><p class="eyebrow">Catalog</p><h2 id="catalog-title">Shop items</h2></div></div>
+    <div class="toolbar">
+      <div class="chips" role="group" aria-label="Filter items by category">
+      <button type="button" class="chip" data-filter-group="shop" data-filter="all" aria-pressed="true">All <span class="chip__count">23</span></button>
+      <button type="button" class="chip" data-filter-group="shop" data-filter="Scrolls" aria-pressed="false">Scrolls <span class="chip__count">7</span></button>
+      <button type="button" class="chip" data-filter-group="shop" data-filter="Runes" aria-pressed="false">Runes <span class="chip__count">8</span></button>
+      <button type="button" class="chip" data-filter-group="shop" data-filter="Boxes &amp; Lamps" aria-pressed="false">Boxes &amp; Lamps <span class="chip__count">5</span></button>
+      <button type="button" class="chip" data-filter-group="shop" data-filter="Gear" aria-pressed="false">Gear <span class="chip__count">3</span></button>
       </div>
-      <div class="shop-grid">
-      <article class="item" data-cat="Scrolls">
-        <span class="tag">Scrolls</span>
-        <h3>Postman Scroll</h3>
-        <div class="cost">10 Premium Days</div>
-        <button type="button" class="btn small" data-open="login">Log in to buy</button>
-      </article>
-      <article class="item" data-cat="Gear">
-        <span class="tag">Gear</span>
-        <h3>Stone Skin Amulet (x3)</h3>
-        <div class="cost">10 Premium Days</div>
-        <button type="button" class="btn small" data-open="login">Log in to buy</button>
-      </article>
-      <article class="item" data-cat="Boxes &amp; Lamps">
-        <span class="tag">Boxes &amp; Lamps</span>
-        <h3>Pandoras Box</h3>
-        <div class="cost">10 Premium Days</div>
-        <button type="button" class="btn small" data-open="login">Log in to buy</button>
-      </article>
-      <article class="item" data-cat="Boxes &amp; Lamps">
-        <span class="tag">Boxes &amp; Lamps</span>
-        <h3>Pandoras Box 2.0</h3>
-        <div class="cost">20 Premium Days</div>
-        <button type="button" class="btn small" data-open="login">Log in to buy</button>
-      </article>
-      <article class="item" data-cat="Scrolls">
-        <span class="tag">Scrolls</span>
-        <h3>Exp Boost Scroll</h3>
-        <div class="cost">10 Premium Days</div>
-        <button type="button" class="btn small" data-open="login">Log in to buy</button>
-      </article>
-      <article class="item" data-cat="Runes">
-        <span class="tag">Runes</span>
-        <h3>Ultimate Healing Rune (x100)</h3>
-        <div class="cost">10 Premium Days</div>
-        <button type="button" class="btn small" data-open="login">Log in to buy</button>
-      </article>
-      <article class="item" data-cat="Runes">
-        <span class="tag">Runes</span>
-        <h3>Sudden Death Rune (x100)</h3>
-        <div class="cost">20 Premium Days</div>
-        <button type="button" class="btn small" data-open="login">Log in to buy</button>
-      </article>
-      <article class="item" data-cat="Runes">
-        <span class="tag">Runes</span>
-        <h3>Explosion Rune (x100)</h3>
-        <div class="cost">10 Premium Days</div>
-        <button type="button" class="btn small" data-open="login">Log in to buy</button>
-      </article>
-      <article class="item" data-cat="Runes">
-        <span class="tag">Runes</span>
-        <h3>Great Fireball Rune (x100)</h3>
-        <div class="cost">10 Premium Days</div>
-        <button type="button" class="btn small" data-open="login">Log in to buy</button>
-      </article>
-      <article class="item" data-cat="Runes">
-        <span class="tag">Runes</span>
-        <h3>Mana Rune (x100)</h3>
-        <div class="cost">10 Premium Days</div>
-        <button type="button" class="btn small" data-open="login">Log in to buy</button>
-      </article>
-      <article class="item" data-cat="Runes">
-        <span class="tag">Runes</span>
-        <h3>Greater Mana Rune (x100)</h3>
-        <div class="cost">20 Premium Days</div>
-        <button type="button" class="btn small" data-open="login">Log in to buy</button>
-      </article>
-      <article class="item" data-cat="Runes">
-        <span class="tag">Runes</span>
-        <h3>Heavy Magic Missile Rune (x100)</h3>
-        <div class="cost">5 Premium Days</div>
-        <button type="button" class="btn small" data-open="login">Log in to buy</button>
-      </article>
-      <article class="item" data-cat="Scrolls">
-        <span class="tag">Scrolls</span>
-        <h3>Change Gold Scroll (7 days)</h3>
-        <div class="cost">5 Premium Days</div>
-        <button type="button" class="btn small" data-open="login">Log in to buy</button>
-      </article>
-      <article class="item" data-cat="Scrolls">
-        <span class="tag">Scrolls</span>
-        <h3>Change Gold Scroll (30 days)</h3>
-        <div class="cost">15 Premium Days</div>
-        <button type="button" class="btn small" data-open="login">Log in to buy</button>
-      </article>
-      <article class="item" data-cat="Scrolls">
-        <span class="tag">Scrolls</span>
-        <h3>Premium Scroll (7 days)</h3>
-        <div class="cost">10 Premium Days</div>
-        <button type="button" class="btn small" data-open="login">Log in to buy</button>
-      </article>
-      <article class="item" data-cat="Scrolls">
-        <span class="tag">Scrolls</span>
-        <h3>Premium Scroll (30 days)</h3>
-        <div class="cost">30 Premium Days</div>
-        <button type="button" class="btn small" data-open="login">Log in to buy</button>
-      </article>
-      <article class="item" data-cat="Boxes &amp; Lamps">
-        <span class="tag">Boxes &amp; Lamps</span>
-        <h3>Rashid Lamp</h3>
-        <div class="cost">20 Premium Days</div>
-        <button type="button" class="btn small" data-open="login">Log in to buy</button>
-      </article>
-      <article class="item" data-cat="Boxes &amp; Lamps">
-        <span class="tag">Boxes &amp; Lamps</span>
-        <h3>Green Djinn Lamp</h3>
-        <div class="cost">20 Premium Days</div>
-        <button type="button" class="btn small" data-open="login">Log in to buy</button>
-      </article>
-      <article class="item" data-cat="Boxes &amp; Lamps">
-        <span class="tag">Boxes &amp; Lamps</span>
-        <h3>Blue Djinn Lamp</h3>
-        <div class="cost">20 Premium Days</div>
-        <button type="button" class="btn small" data-open="login">Log in to buy</button>
-      </article>
-      <article class="item" data-cat="Runes">
-        <span class="tag">Runes</span>
-        <h3>Temple Recall Rune (x3)</h3>
-        <div class="cost">10 Premium Days</div>
-        <button type="button" class="btn small" data-open="login">Log in to buy</button>
-      </article>
-      <article class="item" data-cat="Gear">
-        <span class="tag">Gear</span>
-        <h3>Oldschool Backpack</h3>
-        <div class="cost">10 Premium Days</div>
-        <button type="button" class="btn small" data-open="login">Log in to buy</button>
-      </article>
-      <article class="item" data-cat="Scrolls">
-        <span class="tag">Scrolls</span>
-        <h3>Blessing Scroll</h3>
-        <div class="cost">10 Premium Days</div>
-        <button type="button" class="btn small" data-open="login">Log in to buy</button>
-      </article>
-      <article class="item" data-cat="Gear">
-        <span class="tag">Gear</span>
-        <h3>Key Ring</h3>
-        <div class="cost">10 Premium Days</div>
-        <button type="button" class="btn small" data-open="login">Log in to buy</button>
-      </article>
-      </div>
-    </section>
+      <label class="select">Sort
+        <select data-sort-target="#shop-grid">
+          <option value="default">Shop order</option>
+          <option value="price-asc">Price: low to high</option>
+          <option value="price-desc">Price: high to low</option>
+        </select>
+      </label>
+    </div>
+    <p class="small" data-filter-count="shop" data-noun="items">Showing 23 items</p>
+    <div class="shop-grid" id="shop-grid">
+  <article class="shop-card shop-card--scrolls" data-filter-item="shop" data-cat="Scrolls" data-order="1" data-price="10">
+    <div class="shop-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-scroll"/></svg></div>
+    <span class="shop-card__tag">Scrolls</span>
+    <h3>Postman Scroll</h3>
+    <p class="price"><svg class="icon" aria-hidden="true"><use href="#i-coin"/></svg> <b>10</b> Premium Days</p>
+    <div class="shop-card__foot"><span class="locked"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg> Locked</span>
+      <button type="button" class="btn btn--ghost btn--sm btn--block" data-open="login">Log in to buy</button></div>
+  </article>
+  <article class="shop-card shop-card--gear" data-filter-item="shop" data-cat="Gear" data-order="2" data-price="10">
+    <div class="shop-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></div>
+    <span class="shop-card__tag">Gear</span>
+    <h3>Stone Skin Amulet (x3)</h3>
+    <span class="qty-chip">x3</span>
+    <p class="price"><svg class="icon" aria-hidden="true"><use href="#i-coin"/></svg> <b>10</b> Premium Days</p>
+    <div class="shop-card__foot"><span class="locked"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg> Locked</span>
+      <button type="button" class="btn btn--ghost btn--sm btn--block" data-open="login">Log in to buy</button></div>
+  </article>
+  <article class="shop-card shop-card--boxes" data-filter-item="shop" data-cat="Boxes &amp; Lamps" data-order="3" data-price="10">
+    <div class="shop-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-box"/></svg></div>
+    <span class="shop-card__tag">Boxes &amp; Lamps</span>
+    <h3>Pandoras Box</h3>
+    <p class="price"><svg class="icon" aria-hidden="true"><use href="#i-coin"/></svg> <b>10</b> Premium Days</p>
+    <div class="shop-card__foot"><span class="locked"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg> Locked</span>
+      <button type="button" class="btn btn--ghost btn--sm btn--block" data-open="login">Log in to buy</button></div>
+  </article>
+  <article class="shop-card shop-card--boxes" data-filter-item="shop" data-cat="Boxes &amp; Lamps" data-order="4" data-price="20">
+    <div class="shop-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-box"/></svg></div>
+    <span class="shop-card__tag">Boxes &amp; Lamps</span>
+    <h3>Pandoras Box 2.0</h3>
+    <p class="price"><svg class="icon" aria-hidden="true"><use href="#i-coin"/></svg> <b>20</b> Premium Days</p>
+    <div class="shop-card__foot"><span class="locked"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg> Locked</span>
+      <button type="button" class="btn btn--ghost btn--sm btn--block" data-open="login">Log in to buy</button></div>
+  </article>
+  <article class="shop-card shop-card--scrolls" data-filter-item="shop" data-cat="Scrolls" data-order="5" data-price="10">
+    <div class="shop-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-scroll"/></svg></div>
+    <span class="shop-card__tag">Scrolls</span>
+    <h3>Exp Boost Scroll</h3>
+    <p class="price"><svg class="icon" aria-hidden="true"><use href="#i-coin"/></svg> <b>10</b> Premium Days</p>
+    <div class="shop-card__foot"><span class="locked"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg> Locked</span>
+      <button type="button" class="btn btn--ghost btn--sm btn--block" data-open="login">Log in to buy</button></div>
+  </article>
+  <article class="shop-card shop-card--runes" data-filter-item="shop" data-cat="Runes" data-order="6" data-price="10">
+    <div class="shop-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-rune"/></svg></div>
+    <span class="shop-card__tag">Runes</span>
+    <h3>Ultimate Healing Rune (x100)</h3>
+    <span class="qty-chip">x100</span>
+    <p class="price"><svg class="icon" aria-hidden="true"><use href="#i-coin"/></svg> <b>10</b> Premium Days</p>
+    <div class="shop-card__foot"><span class="locked"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg> Locked</span>
+      <button type="button" class="btn btn--ghost btn--sm btn--block" data-open="login">Log in to buy</button></div>
+  </article>
+  <article class="shop-card shop-card--runes" data-filter-item="shop" data-cat="Runes" data-order="7" data-price="20">
+    <div class="shop-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-rune"/></svg></div>
+    <span class="shop-card__tag">Runes</span>
+    <h3>Sudden Death Rune (x100)</h3>
+    <span class="qty-chip">x100</span>
+    <p class="price"><svg class="icon" aria-hidden="true"><use href="#i-coin"/></svg> <b>20</b> Premium Days</p>
+    <div class="shop-card__foot"><span class="locked"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg> Locked</span>
+      <button type="button" class="btn btn--ghost btn--sm btn--block" data-open="login">Log in to buy</button></div>
+  </article>
+  <article class="shop-card shop-card--runes" data-filter-item="shop" data-cat="Runes" data-order="8" data-price="10">
+    <div class="shop-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-rune"/></svg></div>
+    <span class="shop-card__tag">Runes</span>
+    <h3>Explosion Rune (x100)</h3>
+    <span class="qty-chip">x100</span>
+    <p class="price"><svg class="icon" aria-hidden="true"><use href="#i-coin"/></svg> <b>10</b> Premium Days</p>
+    <div class="shop-card__foot"><span class="locked"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg> Locked</span>
+      <button type="button" class="btn btn--ghost btn--sm btn--block" data-open="login">Log in to buy</button></div>
+  </article>
+  <article class="shop-card shop-card--runes" data-filter-item="shop" data-cat="Runes" data-order="9" data-price="10">
+    <div class="shop-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-rune"/></svg></div>
+    <span class="shop-card__tag">Runes</span>
+    <h3>Great Fireball Rune (x100)</h3>
+    <span class="qty-chip">x100</span>
+    <p class="price"><svg class="icon" aria-hidden="true"><use href="#i-coin"/></svg> <b>10</b> Premium Days</p>
+    <div class="shop-card__foot"><span class="locked"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg> Locked</span>
+      <button type="button" class="btn btn--ghost btn--sm btn--block" data-open="login">Log in to buy</button></div>
+  </article>
+  <article class="shop-card shop-card--runes" data-filter-item="shop" data-cat="Runes" data-order="10" data-price="10">
+    <div class="shop-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-rune"/></svg></div>
+    <span class="shop-card__tag">Runes</span>
+    <h3>Mana Rune (x100)</h3>
+    <span class="qty-chip">x100</span>
+    <p class="price"><svg class="icon" aria-hidden="true"><use href="#i-coin"/></svg> <b>10</b> Premium Days</p>
+    <div class="shop-card__foot"><span class="locked"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg> Locked</span>
+      <button type="button" class="btn btn--ghost btn--sm btn--block" data-open="login">Log in to buy</button></div>
+  </article>
+  <article class="shop-card shop-card--runes" data-filter-item="shop" data-cat="Runes" data-order="11" data-price="20">
+    <div class="shop-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-rune"/></svg></div>
+    <span class="shop-card__tag">Runes</span>
+    <h3>Greater Mana Rune (x100)</h3>
+    <span class="qty-chip">x100</span>
+    <p class="price"><svg class="icon" aria-hidden="true"><use href="#i-coin"/></svg> <b>20</b> Premium Days</p>
+    <div class="shop-card__foot"><span class="locked"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg> Locked</span>
+      <button type="button" class="btn btn--ghost btn--sm btn--block" data-open="login">Log in to buy</button></div>
+  </article>
+  <article class="shop-card shop-card--runes" data-filter-item="shop" data-cat="Runes" data-order="12" data-price="5">
+    <div class="shop-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-rune"/></svg></div>
+    <span class="shop-card__tag">Runes</span>
+    <h3>Heavy Magic Missile Rune (x100)</h3>
+    <span class="qty-chip">x100</span>
+    <p class="price"><svg class="icon" aria-hidden="true"><use href="#i-coin"/></svg> <b>5</b> Premium Days</p>
+    <div class="shop-card__foot"><span class="locked"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg> Locked</span>
+      <button type="button" class="btn btn--ghost btn--sm btn--block" data-open="login">Log in to buy</button></div>
+  </article>
+  <article class="shop-card shop-card--scrolls" data-filter-item="shop" data-cat="Scrolls" data-order="13" data-price="5">
+    <div class="shop-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-scroll"/></svg></div>
+    <span class="shop-card__tag">Scrolls</span>
+    <h3>Change Gold Scroll (7 days)</h3>
+    <span class="qty-chip">7 days</span>
+    <p class="price"><svg class="icon" aria-hidden="true"><use href="#i-coin"/></svg> <b>5</b> Premium Days</p>
+    <div class="shop-card__foot"><span class="locked"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg> Locked</span>
+      <button type="button" class="btn btn--ghost btn--sm btn--block" data-open="login">Log in to buy</button></div>
+  </article>
+  <article class="shop-card shop-card--scrolls" data-filter-item="shop" data-cat="Scrolls" data-order="14" data-price="15">
+    <div class="shop-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-scroll"/></svg></div>
+    <span class="shop-card__tag">Scrolls</span>
+    <h3>Change Gold Scroll (30 days)</h3>
+    <span class="qty-chip">30 days</span>
+    <p class="price"><svg class="icon" aria-hidden="true"><use href="#i-coin"/></svg> <b>15</b> Premium Days</p>
+    <div class="shop-card__foot"><span class="locked"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg> Locked</span>
+      <button type="button" class="btn btn--ghost btn--sm btn--block" data-open="login">Log in to buy</button></div>
+  </article>
+  <article class="shop-card shop-card--scrolls" data-filter-item="shop" data-cat="Scrolls" data-order="15" data-price="10">
+    <div class="shop-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-scroll"/></svg></div>
+    <span class="shop-card__tag">Scrolls</span>
+    <h3>Premium Scroll (7 days)</h3>
+    <span class="qty-chip">7 days</span>
+    <p class="price"><svg class="icon" aria-hidden="true"><use href="#i-coin"/></svg> <b>10</b> Premium Days</p>
+    <div class="shop-card__foot"><span class="locked"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg> Locked</span>
+      <button type="button" class="btn btn--ghost btn--sm btn--block" data-open="login">Log in to buy</button></div>
+  </article>
+  <article class="shop-card shop-card--scrolls" data-filter-item="shop" data-cat="Scrolls" data-order="16" data-price="30">
+    <div class="shop-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-scroll"/></svg></div>
+    <span class="shop-card__tag">Scrolls</span>
+    <h3>Premium Scroll (30 days)</h3>
+    <span class="qty-chip">30 days</span>
+    <p class="price"><svg class="icon" aria-hidden="true"><use href="#i-coin"/></svg> <b>30</b> Premium Days</p>
+    <div class="shop-card__foot"><span class="locked"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg> Locked</span>
+      <button type="button" class="btn btn--ghost btn--sm btn--block" data-open="login">Log in to buy</button></div>
+  </article>
+  <article class="shop-card shop-card--boxes" data-filter-item="shop" data-cat="Boxes &amp; Lamps" data-order="17" data-price="20">
+    <div class="shop-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-box"/></svg></div>
+    <span class="shop-card__tag">Boxes &amp; Lamps</span>
+    <h3>Rashid Lamp</h3>
+    <p class="price"><svg class="icon" aria-hidden="true"><use href="#i-coin"/></svg> <b>20</b> Premium Days</p>
+    <div class="shop-card__foot"><span class="locked"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg> Locked</span>
+      <button type="button" class="btn btn--ghost btn--sm btn--block" data-open="login">Log in to buy</button></div>
+  </article>
+  <article class="shop-card shop-card--boxes" data-filter-item="shop" data-cat="Boxes &amp; Lamps" data-order="18" data-price="20">
+    <div class="shop-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-box"/></svg></div>
+    <span class="shop-card__tag">Boxes &amp; Lamps</span>
+    <h3>Green Djinn Lamp</h3>
+    <p class="price"><svg class="icon" aria-hidden="true"><use href="#i-coin"/></svg> <b>20</b> Premium Days</p>
+    <div class="shop-card__foot"><span class="locked"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg> Locked</span>
+      <button type="button" class="btn btn--ghost btn--sm btn--block" data-open="login">Log in to buy</button></div>
+  </article>
+  <article class="shop-card shop-card--boxes" data-filter-item="shop" data-cat="Boxes &amp; Lamps" data-order="19" data-price="20">
+    <div class="shop-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-box"/></svg></div>
+    <span class="shop-card__tag">Boxes &amp; Lamps</span>
+    <h3>Blue Djinn Lamp</h3>
+    <p class="price"><svg class="icon" aria-hidden="true"><use href="#i-coin"/></svg> <b>20</b> Premium Days</p>
+    <div class="shop-card__foot"><span class="locked"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg> Locked</span>
+      <button type="button" class="btn btn--ghost btn--sm btn--block" data-open="login">Log in to buy</button></div>
+  </article>
+  <article class="shop-card shop-card--runes" data-filter-item="shop" data-cat="Runes" data-order="20" data-price="10">
+    <div class="shop-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-rune"/></svg></div>
+    <span class="shop-card__tag">Runes</span>
+    <h3>Temple Recall Rune (x3)</h3>
+    <span class="qty-chip">x3</span>
+    <p class="price"><svg class="icon" aria-hidden="true"><use href="#i-coin"/></svg> <b>10</b> Premium Days</p>
+    <div class="shop-card__foot"><span class="locked"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg> Locked</span>
+      <button type="button" class="btn btn--ghost btn--sm btn--block" data-open="login">Log in to buy</button></div>
+  </article>
+  <article class="shop-card shop-card--gear" data-filter-item="shop" data-cat="Gear" data-order="21" data-price="10">
+    <div class="shop-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></div>
+    <span class="shop-card__tag">Gear</span>
+    <h3>Oldschool Backpack</h3>
+    <p class="price"><svg class="icon" aria-hidden="true"><use href="#i-coin"/></svg> <b>10</b> Premium Days</p>
+    <div class="shop-card__foot"><span class="locked"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg> Locked</span>
+      <button type="button" class="btn btn--ghost btn--sm btn--block" data-open="login">Log in to buy</button></div>
+  </article>
+  <article class="shop-card shop-card--scrolls" data-filter-item="shop" data-cat="Scrolls" data-order="22" data-price="10">
+    <div class="shop-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-scroll"/></svg></div>
+    <span class="shop-card__tag">Scrolls</span>
+    <h3>Blessing Scroll</h3>
+    <p class="price"><svg class="icon" aria-hidden="true"><use href="#i-coin"/></svg> <b>10</b> Premium Days</p>
+    <div class="shop-card__foot"><span class="locked"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg> Locked</span>
+      <button type="button" class="btn btn--ghost btn--sm btn--block" data-open="login">Log in to buy</button></div>
+  </article>
+  <article class="shop-card shop-card--gear" data-filter-item="shop" data-cat="Gear" data-order="23" data-price="10">
+    <div class="shop-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></div>
+    <span class="shop-card__tag">Gear</span>
+    <h3>Key Ring</h3>
+    <p class="price"><svg class="icon" aria-hidden="true"><use href="#i-coin"/></svg> <b>10</b> Premium Days</p>
+    <div class="shop-card__foot"><span class="locked"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg> Locked</span>
+      <button type="button" class="btn btn--ghost btn--sm btn--block" data-open="login">Log in to buy</button></div>
+  </article>
+    </div>
+  </div>
+</section>
 
-  </main>
+<section class="band band--alt" aria-labelledby="recap-title">
+  <div class="container">
+    <div class="card stack">
+      <h2 id="recap-title">Premium benefits</h2>
+      <ul class="checklist checklist--2col">
+  <li>Access to premium spells.</li>
+  <li>Travel by boat.</li>
+  <li>Buy and own a house.</li>
+  <li>Full health and mana when you level up.</li>
+  <li>Loot window.</li>
+  <li>Make runes without holding a blank rune in your hand.</li>
+  <li>5% extra experience.</li>
+</ul>
+      <div><a class="btn btn--primary" href="donate.html">How to buy</a></div>
+    </div>
+  </div>
+</section>
+</main>
 
-  <footer class="wrap">
-    &copy; BubbaGame &middot; Watch live on <a href="https://twitch.tv/BubbaGame" rel="noopener">Twitch</a>
-  </footer>
+<footer class="site-footer">
+  <img class="mascot mascot--sm site-footer__peek" src="img/mascot-cyclops.svg" width="230" height="260" alt="" loading="lazy">
+  <div class="container site-footer__grid">
+    <div class="site-footer__brand">
+      <a class="brand" href="index.html"><img src="favicon.png" width="36" height="36" alt=""><span class="brand__name">BubbaGame</span></a>
+      <p class="eyebrow">A Realm Reborn</p>
+      <p>Found a bug? Report it to GM BubbaGame in-game or on Discord.</p>
+      <!-- CONFIRM: non-affiliation wording with the owner -->
+      <p class="small">BubbaGame is a fan-run server and is not affiliated with CipSoft GmbH.</p>
+    </div>
+    <nav aria-label="Play"><h2 class="site-footer__title">Play</h2><ul>
+      <li><a href="play.html">Download &amp; guide</a></li><li><a href="serverinfo.html">Server info</a></li>
+      <li><a href="serverinfo.html#faq">Rules &amp; FAQ</a></li><li><a href="shop.html">Shop</a></li><li><a href="donate.html">Donate</a></li></ul></nav>
+    <nav aria-label="Community"><h2 class="site-footer__title">Community</h2><ul>
+      <li><a href="highscores.html">Highscores</a></li><li><a href="online.html">Who's online</a></li>
+      <li><a href="deaths.html">Latest deaths</a></li><li><a href="character.html">Find a character</a></li>
+      <li><a href="news.html">News</a></li><li><a href="https://twitch.tv/BubbaGame" rel="noopener">Watch on Twitch</a></li>
+      <!-- CONFIRM: Discord invite URL -->
+      <li><a class="is-placeholder" href="#discord" data-toast="Discord invite link not provided yet.">Discord</a> <span class="sample-tag">Link needed</span></li></ul></nav>
+    <div><h2 class="site-footer__title">Server</h2>
+      <div class="ipbox ipbox--compact"><code>95.179.145.195</code><button type="button" class="copy-btn" data-copy="95.179.145.195" data-copy-label="IP">Copy</button></div>
+      <ul class="site-footer__facts"><li>Version 7.72 (7.4 server)</li><li>EU hosted</li><li>Daily serversave 07:00 server time</li></ul></div>
+  </div>
+  <div class="container site-footer__bottom">
+    <span>&copy; BubbaGame</span><span>Live numbers on this preview are sample data.</span><span>Site preview by Four Corners Games</span>
+  </div>
+</footer>
 
-  <dialog id="login-dialog" aria-labelledby="login-title">
-    <button type="button" class="dialog-close" aria-label="Close">&times;</button>
-    <h2 id="login-title">Login to your account</h2>
-    <form method="post" action="login.php">
-      <label>Account number<input type="text" name="account_number" inputmode="numeric" autocomplete="username" required></label>
-      <label>Password<input type="password" name="password" autocomplete="current-password" required></label>
-      <button type="submit" class="btn">Login</button>
-    </form>
-  </dialog>
-
-  <dialog id="register-dialog" aria-labelledby="register-title">
-    <button type="button" class="dialog-close" aria-label="Close">&times;</button>
-    <h2 id="register-title">Create your account</h2>
-    <form method="post" action="create.php">
-      <label>Desired account number (numbers only)<input type="text" name="account_number" inputmode="numeric" pattern="[0-9]+" autocomplete="username" required></label>
-      <label>Password<input type="password" name="password" autocomplete="new-password" required></label>
-      <label>Email (optional)<input type="email" name="email" autocomplete="email"></label>
-      <button type="submit" class="btn">Register account</button>
-    </form>
-  </dialog>
-
-  <script src="js/main.js"></script>
-</body>
-</html>
+<dialog class="dialog" id="login-dialog" aria-labelledby="login-title">
+  <button type="button" class="dialog__close" data-close aria-label="Close"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button>
+  <h2 id="login-title">Log in to your account</h2>
+  <form class="form" method="post" action="login.php" data-demo-form>
+    <label class="field">Account number<input type="text" name="account_number" inputmode="numeric" autocomplete="username" required></label>
+    <label class="field">Password<input type="password" name="password" autocomplete="current-password" required></label>
+    <button type="submit" class="btn btn--primary btn--block">Log in</button>
+    <p class="small">No account yet? <button type="button" class="link-btn" data-open="register">Create one</button></p>
+  </form>
+</dialog>
+<dialog class="dialog" id="register-dialog" aria-labelledby="register-title">
+  <button type="button" class="dialog__close" data-close aria-label="Close"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button>
+  <h2 id="register-title">Create your account</h2>
+  <form class="form" method="post" action="create.php" data-demo-form>
+    <label class="field">Desired account number (numbers only)<input type="text" name="account_number" inputmode="numeric" pattern="[0-9]+" autocomplete="username" required></label>
+    <label class="field">Password<input type="password" name="password" autocomplete="new-password" required></label>
+    <label class="field">Email (optional)<input type="email" name="email" autocomplete="email"></label>
+    <button type="submit" class="btn btn--primary btn--block">Register account</button>
+    <p class="small">Already have one? <button type="button" class="link-btn" data-open="login">Log in</button></p>
+  </form>
+</dialog>
+<div id="live" class="sr-only" aria-live="polite"></div>
+<div class="toast-region" aria-live="polite"></div>
+</body></html>
