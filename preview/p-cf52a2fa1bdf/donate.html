@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Donate & Buy Premium – BubbaGame</title>
+  <meta name="description" content="How to buy BubbaGame premium scrolls: Tibia Coins, crypto or Twitch.">
+  <meta name="theme-color" content="#120d24">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="favicon.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="wrap hero">
+    <a href="index.html"><img src="img/banner.jpg" width="1960" height="600" alt="BubbaGame.online – A Realm Reborn. Server 7.4, EU, 7.72 client. 2x EXP, 1x rest." fetchpriority="high"></a>
+    <nav class="nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Item Shop &amp; Premium</a>
+      <a href="donate.html" aria-current="page">Donate</a>
+      <span class="spacer"></span>
+      <button type="button" data-open="login">Login</button>
+      <button type="button" class="cta" data-open="register">Create Account</button>
+    </nav>
+  </header>
+
+  <main id="main" class="wrap">
+
+    <h1>Donate &amp; Buy Premium</h1>
+    <section class="panel" aria-labelledby="order">
+      <h2 id="order">How to order</h2>
+      <p>Automated web shop purchases are offline. All premium scroll orders are handled manually by the administration to ensure secure processing.</p>
+      <p><b>Contact BubbaGame for purchase.</b> You can pay via:</p>
+      <ul class="checklist">
+        <li>Tibia Coins (Real Tibia)</li>
+        <li>Crypto</li>
+        <li>Twitch Subscriptions/Donations</li>
+        <li>Perhaps other ways too &ndash; ask me!</li>
+      </ul>
+    </section>
+    <div class="notice" role="note" style="margin-top:20px">
+      <strong>&#9888;&#65039; Important:</strong> Contact me in game, <b>GM BubbaGame</b>, and I will come to you personally (can only be done when I&#39;m online).
+    </div>
+    <p><a class="btn alt" href="index.html">&larr; Back to homepage</a></p>
+
+  </main>
+
+  <footer class="wrap">
+    &copy; BubbaGame &middot; Watch live on <a href="https://twitch.tv/BubbaGame" rel="noopener">Twitch</a>
+  </footer>
+
+  <dialog id="login-dialog" aria-labelledby="login-title">
+    <button type="button" class="dialog-close" aria-label="Close">&times;</button>
+    <h2 id="login-title">Login to your account</h2>
+    <form method="post" action="login.php">
+      <label>Account number<input type="text" name="account_number" inputmode="numeric" autocomplete="username" required></label>
+      <label>Password<input type="password" name="password" autocomplete="current-password" required></label>
+      <button type="submit" class="btn">Login</button>
+    </form>
+  </dialog>
+
+  <dialog id="register-dialog" aria-labelledby="register-title">
+    <button type="button" class="dialog-close" aria-label="Close">&times;</button>
+    <h2 id="register-title">Create your account</h2>
+    <form method="post" action="create.php">
+      <label>Desired account number (numbers only)<input type="text" name="account_number" inputmode="numeric" pattern="[0-9]+" autocomplete="username" required></label>
+      <label>Password<input type="password" name="password" autocomplete="new-password" required></label>
+      <label>Email (optional)<input type="email" name="email" autocomplete="email"></label>
+      <button type="submit" class="btn">Register account</button>
+    </form>
+  </dialog>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>BubbaGame – A Realm Reborn</title>
+  <meta name="description" content="BubbaGame is a 7.4 Tibia server played on the 7.72 client. 2x experience, botting allowed, no wipe planned.">
+  <meta name="theme-color" content="#120d24">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="favicon.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="wrap hero">
+    <a href="index.html"><img src="img/banner.jpg" width="1960" height="600" alt="BubbaGame.online – A Realm Reborn. Server 7.4, EU, 7.72 client. 2x EXP, 1x rest." fetchpriority="high"></a>
+    <nav class="nav" aria-label="Main">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="shop.html">Item Shop &amp; Premium</a>
+      <a href="donate.html">Donate</a>
+      <span class="spacer"></span>
+      <button type="button" data-open="login">Login</button>
+      <button type="button" class="cta" data-open="register">Create Account</button>
+    </nav>
+  </header>
+
+  <main id="main" class="wrap">
+
+    <section aria-labelledby="welcome">
+      <h1 id="welcome">Welcome!</h1>
+      <p class="lead"><b>BubbaGame</b> is a 7.4 Tibia server played on the 7.72 client, with classic gameplay and a few custom twists. The server is now <span class="live">LIVE</span> and (allegedly) running.</p>
+      <ul class="stats" aria-label="Server at a glance">
+        <li><b>2x</b> experience</li>
+        <li><b>1x</b> everything else</li>
+        <li><b>EU</b> hosted</li>
+        <li>Botting <b>allowed</b></li>
+        <li><b>No wipe</b> planned</li>
+      </ul>
+      <p class="cta-row">
+        <button type="button" class="btn big" data-open="register">Play now &ndash; create account</button>
+        <a class="btn alt big" href="https://twitch.tv/BubbaGame" rel="noopener">&#9654; Watch live on Twitch</a>
+        <button type="button" class="btn ghost big" data-toast="The Discord invite link goes here.">Join Discord</button>
+      </p>
+    </section>
+
+    <section class="statusbar" aria-label="Server status">
+      <div class="status-main"><span class="dot" aria-hidden="true"></span><b>Online</b></div>
+      <div><b>47</b> players online</div>
+      <div>Uptime <b>3d 14h</b></div>
+      <div>Serversave in <b id="countdown" data-hour="7">--:--:--</b></div>
+      <span class="sample" title="Placeholder numbers for this preview">Sample data</span>
+    </section>
+
+    <section class="panel" aria-labelledby="steps">
+      <h2 id="steps">Start playing in 3 steps</h2>
+      <ol class="steps">
+        <li>
+          <span class="n">1</span>
+          <div><h3>Create an account</h3><p class="muted">Pick an account number and a password. Email is optional.</p>
+          <button type="button" class="btn small" data-open="register">Create account</button></div>
+        </li>
+        <li>
+          <span class="n">2</span>
+          <div><h3>Download a client</h3><p class="muted">Classic Tibia 7.72, or OTClient v8 with a built-in bot and WASD.</p>
+          <a class="btn small" href="#clients">Choose a client</a></div>
+        </li>
+        <li>
+          <span class="n">3</span>
+          <div><h3>Connect</h3><p class="muted">Server IP, version <code>772</code>:</p>
+          <div class="ipbox"><code id="server-ip">95.179.145.195</code><button type="button" class="btn small alt" id="copy-ip">Copy</button></div></div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="widgets" aria-label="Live from the server">
+      <div class="panel">
+        <h2>Top players <span class="sample">Sample data</span></h2>
+        <table class="list">
+          <thead><tr><th>#</th><th>Name</th><th>Vocation</th><th class="r">Level</th></tr></thead>
+          <tbody>
+            <tr><td class="rank">1</td><td><a href="#">Bubba Prime</a></td><td>Knight</td><td class="r">118</td></tr>
+            <tr><td class="rank">2</td><td><a href="#">Mystic Moss</a></td><td>Druid</td><td class="r">112</td></tr>
+            <tr><td class="rank">3</td><td><a href="#">Sir Toasty</a></td><td>Paladin</td><td class="r">107</td></tr>
+            <tr><td class="rank">4</td><td><a href="#">Zap Brannigan</a></td><td>Sorcerer</td><td class="r">104</td></tr>
+            <tr><td class="rank">5</td><td><a href="#">Grim Wobble</a></td><td>Knight</td><td class="r">99</td></tr>
+          </tbody>
+        </table>
+        <p class="muted"><a href="#">Full highscores &rarr;</a></p>
+      </div>
+      <div class="panel">
+        <h2>Who&#39;s online <span class="sample">Sample data</span></h2>
+        <ul class="online">
+          <li><span class="dot sm" aria-hidden="true"></span><a href="#">Bubba Prime</a><span>Knight &middot; 118</span></li>
+          <li><span class="dot sm" aria-hidden="true"></span><a href="#">Sir Toasty</a><span>Paladin &middot; 107</span></li>
+          <li><span class="dot sm" aria-hidden="true"></span><a href="#">Pixel Pete</a><span>Druid &middot; 76</span></li>
+          <li><span class="dot sm" aria-hidden="true"></span><a href="#">Dragon Dan</a><span>Knight &middot; 64</span></li>
+          <li><span class="dot sm" aria-hidden="true"></span><a href="#">Little Lumi</a><span>Sorcerer &middot; 41</span></li>
+          <li><span class="dot sm" aria-hidden="true"></span><a href="#">Noob Saibot</a><span>Paladin &middot; 12</span></li>
+        </ul>
+        <p class="muted"><a href="#">See all 47 &rarr;</a></p>
+      </div>
+      <div class="panel">
+        <h2>Latest deaths <span class="sample">Sample data</span></h2>
+        <ul class="deaths">
+          <li><a href="#">Pixel Pete</a> (76) died to a dragon lord<time>12 min ago</time></li>
+          <li><a href="#">Dragon Dan</a> (64) died to a giant spider<time>31 min ago</time></li>
+          <li><a href="#">Noob Saibot</a> (12) died to a troll<time>1 h ago</time></li>
+          <li><a href="#">Little Lumi</a> (41) died to a necromancer<time>2 h ago</time></li>
+          <li><a href="#">Grim Wobble</a> (99) died to a demon<time>3 h ago</time></li>
+        </ul>
+        <p class="muted"><a href="#">More deaths &rarr;</a></p>
+      </div>
+    </section>
+
+    <section class="panel search" aria-labelledby="find">
+      <h2 id="find">Find a character</h2>
+      <form class="find-form" id="find-form" role="search">
+        <label class="sr" for="find-name">Character name</label>
+        <input id="find-name" type="text" placeholder="Character name" autocomplete="off" required>
+        <button type="submit" class="btn">Search</button>
+      </form>
+    </section>
+
+    <section aria-labelledby="news">
+      <h2 id="news">News <span class="sample">Sample data</span></h2>
+      <div class="news-grid">
+        <article class="panel">
+          <time>Today</time>
+          <h3>The server is LIVE</h3>
+          <p class="muted">Classic 7.4 gameplay on the 7.72 client, 2x experience and no wipe planned. Create your account and jump in.</p>
+        </article>
+        <article class="panel">
+          <time>This week</time>
+          <h3>Daily serversave</h3>
+          <p class="muted">Logins are blocked for five minutes before the 07:00 serversave. The server is back about a minute later.</p>
+        </article>
+        <article class="panel">
+          <time>Good to know</time>
+          <h3>Premium Days &amp; the item shop</h3>
+          <p class="muted">Premium Days and shop items are ordered through the admin. See the <a href="donate.html">Donate page</a> for how.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel" aria-labelledby="clients">
+      <h2 id="clients">Which client should I use?</h2>
+      <p>You can choose between two game clients. Pick the one that suits how you play.</p>
+      <div class="grid-clients">
+        <div class="card">
+          <h3>1. Tibia 7.72 &ndash; the classic client</h3>
+          <ul>
+            <li>The original Tibia experience.</li>
+            <li>Recommended if you play by hand.</li>
+            <li>Stable and lightweight.</li>
+          </ul>
+          <a class="btn" href="https://www.mediafire.com/file/wkk4c5mt3vztbk2/Tibia772.zip/file" rel="noopener">&#11015; Download Tibia 7.72</a>
+        </div>
+        <div class="card">
+          <h3>2. OTClient v8 &ndash; built-in bot and WASD</h3>
+          <ul>
+            <li>Botting is allowed on BubbaGame.</li>
+            <li>Comes with a bot, smart walking and WASD movement built in.</li>
+            <li>Also the client to use if you want to watch someone&#39;s cast.</li>
+          </ul>
+          <a class="btn" href="https://www.mediafire.com/file/q5s1jmlyd6j3zwf/v8_client_tibia.rar/file" rel="noopener">&#11015; Download v8 client</a>
+          <p class="ip-note">Set the IP to <code>95.179.145.195</code> and the version to <code>772</code>.</p>
+        </div>
+      </div>
+      <img class="mascot-solo" src="img/mascot-download.svg" width="210" height="150" alt="Download here!">
+    </section>
+
+    <section class="panel" aria-labelledby="map">
+      <div class="with-mascot">
+        <div>
+          <h2 id="map">Full map (optional)</h2>
+          <p>Don&#39;t want to explore the whole world yourself? Download the full map for your client:</p>
+          <p>
+            <a class="btn small" href="https://www.mediafire.com/file/om2coxvx3z4rij2/772_FULL_MAP.zip/file" rel="noopener">Full Map for 7.72 Client</a>
+            <a class="btn small alt" href="https://www.mediafire.com/file/4lx89uqsg03e2qa/V8_FULL_MAP.zip/file" rel="noopener">Full Map for v8 Client</a>
+          </p>
+          <p class="muted"><em>Close your client first, then:</em> <b>7.72:</b> unzip the files into your 7.72 client folder. <b>v8:</b> put the <b>.otmm</b> file in <code>%APPDATA%\OTClientV8\otclientv8</code> (paste that into the Explorer address bar).</p>
+        </div>
+        <img src="img/mascot-map.svg" width="170" height="140" alt="Where am I?!" loading="lazy">
+      </div>
+      <details>
+        <summary>v8 map reset itself?</summary>
+        <p class="muted">The v8 client saves the map file when you log out, so a crash or a lost connection during the daily server restart can overwrite it. Keep a copy of the <b>.otmm</b> file somewhere safe and just paste it back if your map is gone. To stop it from ever being overwritten, right-click the <b>.otmm</b> file &rarr; <b>Properties</b> &rarr; tick <b>Read-only</b> (new areas you explore will then not be saved until you untick it).</p>
+      </details>
+    </section>
+
+    <section class="panel" aria-labelledby="lag">
+      <div class="with-mascot">
+        <div>
+          <h2 id="lag">Still not smooth? A few PC settings that often help the old client</h2>
+          <ul class="tips">
+            <li><b>Stuttering?</b> Make a shortcut to Tibia.exe &rarr; right-click &rarr; <b>Properties</b> &rarr; in <b>Target</b> add <b>engine 1</b> at the very end, after the closing quote: <code>"C:\Games\Tibia772\Tibia.exe" engine 1</code></li>
+            <li><b>Turn off V-Sync for Tibia:</b> NVIDIA Control Panel &rarr; Manage 3D settings &rarr; Program Settings &rarr; add Tibia.exe &rarr; Vertical sync: Off. (AMD: Adrenalin &rarr; Gaming &rarr; Tibia &rarr; Wait for Vertical Refresh: Off.)</li>
+            <li><b>Use your graphics card:</b> Windows Settings &rarr; System &rarr; Display &rarr; Graphics &rarr; add Tibia.exe &rarr; Options &rarr; High performance.</li>
+            <li><b>Disable fullscreen optimizations:</b> right-click Tibia.exe &rarr; Properties &rarr; Compatibility &rarr; tick &quot;Disable fullscreen optimizations&quot;.</li>
+            <li><b>Streaming with OBS?</b> Use Window Capture instead of Game Capture for the 7.72 client.</li>
+          </ul>
+        </div>
+        <img src="img/mascot-warlock.svg" width="170" height="150" alt="Begone, lag!" loading="lazy">
+      </div>
+      <img class="shot" src="img/engine.jpg" width="187" height="18" alt="Add engine 1 to the shortcut target" loading="lazy">
+    </section>
+
+    <div class="grid-2">
+      <section class="panel" aria-labelledby="newhere">
+        <div class="with-mascot">
+          <div>
+            <h2 id="newhere">New here?</h2>
+            <p><b>Need help or want to chat?</b> Open the <b>Game Chat</b> channel in-game to talk with other players, ask questions and share what you know.</p>
+            <p><b>Tasks:</b> You can find tasks at any post office NPC.</p>
+          </div>
+          <img src="img/mascot-cyclops.svg" width="130" height="130" alt="Welcome, newbie!" loading="lazy">
+        </div>
+        <p><b>Looking for someone?</b> Everything is in-game:</p>
+        <table class="cmds">
+          <tr><td><code>!character "name</code></td><td>level, vocation, city and guild</td></tr>
+          <tr><td><code>!deathlist "name</code></td><td>recent deaths</td></tr>
+          <tr><td><code>!highscore</code></td><td>top 50 (add <code>"magic</code>, <code>"sword</code> &hellip;)</td></tr>
+          <tr><td><code>!guildlist</code></td><td>all guilds</td></tr>
+          <tr><td><code>!guildinfo "name</code></td><td>members of a guild</td></tr>
+        </table>
+        <p>Type <code>!commands</code> in-game for the full list. The most useful ones:</p>
+        <ul class="checklist">
+          <li><b>!online</b> &ndash; who is playing right now</li>
+          <li><b>!tasklist</b> &ndash; every kill task, <b>!task</b> shows your current one</li>
+          <li><b>!highscore</b> and <b>!character "name</b> &ndash; top lists and character info</li>
+          <li><b>!serverinfo</b> and <b>!uptime</b> &ndash; server rates and uptime</li>
+          <li><b>!kills</b> and <b>!deathlist</b> &ndash; your frags and recent deaths</li>
+          <li><b>!guild</b> &ndash; found a guild, <b>!buyhouse</b> while facing a house door</li>
+          <li><b>!share</b> &ndash; toggle experience sharing in a party</li>
+          <li><b>!cast</b> &ndash; stream your gameplay to other players</li>
+        </ul>
+      </section>
+
+      <div>
+        <section class="panel" aria-labelledby="know">
+          <h2 id="know">Good to know</h2>
+          <ul class="checklist">
+            <li>Experience is 2x, everything else is 1x, and the spawn rate is faster than usual.</li>
+            <li>The server is EU-hosted.</li>
+            <li>Daily serversave at 07:00 server time &ndash; logins are blocked for the five minutes before it, and the server is back about a minute later.</li>
+            <li>Botting is allowed and you may play up to 3 accounts.</li>
+            <li>Premium days and shop items are bought under <a href="shop.html">Item Shop and Premium Days</a>.</li>
+            <li>No wipe is planned &ndash; your progress stays.</li>
+            <li><b>Found a bug?</b> Report it to GM BubbaGame in-game or on Discord.</li>
+          </ul>
+        </section>
+        <section class="panel" aria-labelledby="prem" style="margin-top:16px">
+          <h2 id="prem">Premium benefits</h2>
+          <ul class="checklist">
+            <li>Access to premium spells.</li>
+            <li>Travel by boat.</li>
+            <li>Buy and own a house.</li>
+            <li>Full health and mana when you level up.</li>
+            <li>Loot window.</li>
+            <li>Make runes without holding a blank rune in your hand.</li>
+            <li>5% extra experience.</li>
+          </ul>
+          <img class="mascot-solo" src="img/mascot-boat.svg" width="210" height="140" alt="Premium cruise!" loading="lazy">
+        </section>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="wrap">
+    &copy; BubbaGame &middot; Watch live on <a href="https://twitch.tv/BubbaGame" rel="noopener">Twitch</a>
+  </footer>
+
+  <dialog id="login-dialog" aria-labelledby="login-title">
+    <button type="button" class="dialog-close" aria-label="Close">&times;</button>
+    <h2 id="login-title">Login to your account</h2>
+    <form method="post" action="login.php">
+      <label>Account number<input type="text" name="account_number" inputmode="numeric" autocomplete="username" required></label>
+      <label>Password<input type="password" name="password" autocomplete="current-password" required></label>
+      <button type="submit" class="btn">Login</button>
+    </form>
+  </dialog>
+
+  <dialog id="register-dialog" aria-labelledby="register-title">
+    <button type="button" class="dialog-close" aria-label="Close">&times;</button>
+    <h2 id="register-title">Create your account</h2>
+    <form method="post" action="create.php">
+      <label>Desired account number (numbers only)<input type="text" name="account_number" inputmode="numeric" pattern="[0-9]+" autocomplete="username" required></label>
+      <label>Password<input type="password" name="password" autocomplete="new-password" required></label>
+      <label>Email (optional)<input type="email" name="email" autocomplete="email"></label>
+      <button type="submit" class="btn">Register account</button>
+    </form>
+  </dialog>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

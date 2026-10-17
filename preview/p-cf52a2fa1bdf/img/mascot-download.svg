@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 240" width="300" height="240">
+  <g transform="translate(150 50)">
+    <path d="M-110 -8 L-92 -30 L-70 -22 L-52 -42 L-30 -28 L-6 -46 L12 -28 L36 -44 L52 -24 L78 -36 L88 -14 L112 -14 L100 6 L118 22 L94 30 L98 50 L72 44 L58 62 L38 46 L16 62 L-2 44 L-26 58 L-40 40 L-66 50 L-72 30 L-100 32 L-90 12 Z" fill="#fff36a" stroke="#111" stroke-width="3" stroke-linejoin="round"/>
+    <text x="0" y="0" font-family="Impact, 'Arial Black', sans-serif" font-size="26" font-weight="900" text-anchor="middle" fill="#111" transform="rotate(-6)">DOWNLOAD</text>
+    <text x="0" y="28" font-family="Impact, 'Arial Black', sans-serif" font-size="26" font-weight="900" text-anchor="middle" fill="#d6231e" transform="rotate(-6)">HERE!</text>
+  </g>
+  <path d="M150 196 C 110 222, 60 214, 30 190" fill="none" stroke="#111" stroke-width="11" stroke-linecap="round"/>
+  <path d="M150 196 C 110 222, 60 214, 30 190" fill="none" stroke="#f2c230" stroke-width="7" stroke-linecap="round"/>
+  <path d="M14 178 L44 182 L28 206 Z" fill="#f2c230" stroke="#111" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M248 214 q30 4 28 -26" fill="none" stroke="#111" stroke-width="8" stroke-linecap="round"/>
+  <path d="M248 214 q30 4 28 -26" fill="none" stroke="#c81e1a" stroke-width="4" stroke-linecap="round"/>
+  <path d="M268 190 l8 -16 l10 14 z" fill="#c81e1a" stroke="#111" stroke-width="3" stroke-linejoin="round"/>
+  <ellipse cx="200" cy="230" rx="14" ry="7" fill="#7a1210" stroke="#111" stroke-width="3"/>
+  <ellipse cx="236" cy="230" rx="14" ry="7" fill="#7a1210" stroke="#111" stroke-width="3"/>
+  <ellipse cx="218" cy="200" rx="34" ry="30" fill="#d6231e" stroke="#111" stroke-width="3"/>
+  <ellipse cx="218" cy="206" rx="20" ry="17" fill="#f06a5a"/>
+  <path d="M248 192 q14 6 6 20" fill="none" stroke="#111" stroke-width="12" stroke-linecap="round"/>
+  <path d="M248 192 q14 6 6 20" fill="none" stroke="#d6231e" stroke-width="7" stroke-linecap="round"/>
+  <path d="M190 192 L160 186" stroke="#111" stroke-width="13" stroke-linecap="round"/>
+  <path d="M190 192 L160 186" stroke="#d6231e" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="157" cy="186" r="8" fill="#e0362f" stroke="#111" stroke-width="3"/>
+  <path d="M151 183 L138 180" stroke="#111" stroke-width="7" stroke-linecap="round"/>
+  <path d="M151 183 L138 180" stroke="#e0362f" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="218" cy="146" r="36" fill="#e0362f" stroke="#111" stroke-width="3"/>
+  <path d="M192 124 Q180 100 186 86 Q196 104 206 114 Z" fill="#f2c230" stroke="#111" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M244 124 Q256 100 250 86 Q240 104 230 114 Z" fill="#f2c230" stroke="#111" stroke-width="3" stroke-linejoin="round"/>
+  <ellipse cx="204" cy="142" rx="10" ry="12" fill="#fff" stroke="#111" stroke-width="3"/>
+  <ellipse cx="232" cy="142" rx="10" ry="12" fill="#fff" stroke="#111" stroke-width="3"/>
+  <circle cx="200" cy="145" r="5" fill="#111"/>
+  <circle cx="228" cy="145" r="5" fill="#111"/>
+  <circle cx="198" cy="143" r="1.6" fill="#fff"/>
+  <circle cx="226" cy="143" r="1.6" fill="#fff"/>
+  <path d="M194 126 q10 -6 20 0" fill="none" stroke="#111" stroke-width="3" stroke-linecap="round"/>
+  <path d="M222 126 q10 -6 20 0" fill="none" stroke="#111" stroke-width="3" stroke-linecap="round"/>
+  <ellipse cx="196" cy="160" rx="6" ry="4" fill="#ff8f7f" opacity="0.8"/>
+  <ellipse cx="240" cy="160" rx="6" ry="4" fill="#ff8f7f" opacity="0.8"/>
+  <path d="M204 160 Q218 176 234 160 Z" fill="#5a0b0a" stroke="#111" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M209 162 l4 7 l3 -6 z" fill="#fff"/>
+</svg>
