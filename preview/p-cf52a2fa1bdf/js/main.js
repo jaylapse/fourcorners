@@ -1,3 +1,4 @@
+/* Concept preview. Design and code (c) 2026 Four Corners Games. Not licensed for use, copying or redistribution without a written agreement. */
 (() => {
   'use strict';
   document.documentElement.classList.add('js');
