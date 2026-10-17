@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
-  <title>BubbaGame – A Realm Reborn</title>
+  <title>Home - BubbaGame</title>
   <meta name="description" content="BubbaGame is a 7.4 Tibia server played on the 7.72 client, with classic gameplay and a few custom twists. 2x experience, EU hosted, no wipe planned.">
   <meta name="theme-color" content="#0d0517">
   <link rel="icon" href="favicon.ico" sizes="any">
@@ -16,131 +16,157 @@
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
-<div class="masthead" data-masthead>
+<div class="app">
+
   <div class="topbar" role="region" aria-label="Server status">
-    <div class="container topbar__inner">
-      <span class="status"><span class="status-dot" aria-hidden="true"></span>Live</span>
-      <span class="topbar__item topbar__hide-md">Serversave in <b data-countdown="07:00">--:--:--</b></span>
-      <span class="topbar__spacer"></span>
-      <span class="topbar__item topbar__ip"><span class="topbar__hide-xs">IP <code>95.179.145.195</code></span>
-        <button type="button" class="copy-btn" data-copy="95.179.145.195" data-copy-label="IP">Copy<span class="topbar__show-xs"> IP</span></button></span>
-      <span class="topbar__item topbar__hide-md">Version 7.72</span>
-      <a class="topbar__item topbar__hide-md" href="https://twitch.tv/BubbaGame" rel="noopener">Twitch</a>
+    <span class="status"><span class="status-dot" aria-hidden="true"></span>Live</span>
+    <span class="topbar__item"><svg class="icon topbar__clock" aria-hidden="true"><use href="#i-clock"/></svg><span class="topbar__label">Serversave in </span><b data-countdown="07:00">--:--:--</b></span>
+    <span class="topbar__spacer"></span>
+    <span class="topbar__item topbar__ip"><span class="topbar__ipl">IP <code>95.179.145.195</code></span>
+      <button type="button" class="copy-btn" data-copy="95.179.145.195" data-copy-label="IP">Copy<span class="topbar__show-xs"> IP</span></button></span>
+    <a class="topbar__item topbar__link" href="https://twitch.tv/BubbaGame" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-stream"/></svg><span class="topbar__txt">Twitch</span></a>
+    <a class="topbar__item topbar__link" href="https://discordapp.com/invite/hm93u26" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg><span class="topbar__txt">Discord</span></a>
+  </div>
+
+  <div class="sidebar">
+    <div class="sidebar__main">
+      <a class="brand" href="#home" data-view-link="home"><img src="favicon.png" width="36" height="36" alt=""><span class="brand__name">BubbaGame</span></a>
+      <nav class="sidenav" aria-label="Main">
+        <p class="sidenav__label" id="nav-play">Play</p>
+        <ul aria-labelledby="nav-play">
+          <li><a href="#home" data-view-link="home"><svg class="icon" aria-hidden="true"><use href="#i-home"/></svg><span>Home</span></a></li>
+          <li><a href="#account" data-view-link="account"><svg class="icon" aria-hidden="true"><use href="#i-user"/></svg><span>Account</span></a></li>
+          <li><a href="#download" data-view-link="download"><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg><span>Download</span></a></li>
+          <li><a href="#map" data-view-link="map"><svg class="icon" aria-hidden="true"><use href="#i-map"/></svg><span>Full map</span></a></li>
+        </ul>
+        <p class="sidenav__label" id="nav-guide">Guide</p>
+        <ul aria-labelledby="nav-guide">
+          <li><a href="#info" data-view-link="info"><svg class="icon" aria-hidden="true"><use href="#i-info"/></svg><span>Info</span></a></li>
+          <li><a href="#commands" data-view-link="commands"><svg class="icon" aria-hidden="true"><use href="#i-terminal"/></svg><span>Commands</span></a></li>
+          <li><a href="#lag" data-view-link="lag"><svg class="icon" aria-hidden="true"><use href="#i-zap"/></svg><span>Fix lag</span></a></li>
+        </ul>
+        <p class="sidenav__label" id="nav-store">Store</p>
+        <ul aria-labelledby="nav-store">
+          <li><a href="#premium" data-view-link="premium"><svg class="icon" aria-hidden="true"><use href="#i-crown"/></svg><span>Premium</span></a></li>
+          <li><a href="#shop" data-view-link="shop"><svg class="icon" aria-hidden="true"><use href="#i-bag"/></svg><span>Item shop</span></a></li>
+          <li><a href="#donate" data-view-link="donate"><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg><span>Donate</span></a></li>
+        </ul>
+        <ul class="sidenav__solo">
+          <li><a href="#contact" data-view-link="contact"><svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg><span>Contact</span></a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="sidebar__foot">
+      <p>Concept preview by Four Corners Games. Design and code &copy; 2026 Four Corners Games, not licensed for use.</p>
+      <!-- CONFIRM: non-affiliation wording with the owner -->
+      <p>BubbaGame is a fan-run server and is not affiliated with CipSoft GmbH.</p>
     </div>
   </div>
-  <header class="site-header">
-    <div class="container site-header__inner">
-      <a class="brand" href="index.html"><img src="favicon.png" width="36" height="36" alt=""><span class="brand__name">BubbaGame</span></a>
-      <nav class="site-nav" id="site-nav" aria-label="Main" data-nav>
-        <ul class="site-nav__list">
-          <li><a href="index.html" aria-current="page">Home</a></li>
-          <li><a href="shop.html">Item Shop and Premium Days</a></li>
-          <li><a href="donate.html">Donate</a></li>
-        </ul>
-        <div class="site-nav__actions">
-          <button type="button" class="btn btn--ghost btn--sm" data-open="login">Log in</button>
-          <button type="button" class="btn btn--primary btn--sm" data-open="register">Create account</button>
-        </div>
-      </nav>
-      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
-        <svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg><span class="sr-only">Menu</span>
-      </button>
-    </div>
-  </header>
-</div>
-<main id="main" tabindex="-1">
 
-<!-- 1. Hero stage -->
-<section class="hero" aria-labelledby="hero-title">
-  <div class="hero__sky" aria-hidden="true"></div>
-  <!-- placeholder scenery -->
-  <svg class="hero__mountains" viewBox="0 0 1440 180" preserveAspectRatio="none" aria-hidden="true" focusable="false">
-    <path fill="#2a0f38" d="M0 180L0 100L90 55L160 95L270 30L370 90L460 50L580 100L660 60L790 105L900 45L990 85L1110 25L1210 80L1300 55L1440 95L1440 180Z"/>
-    <path fill="#0d0517" d="M0 180L0 140L120 100L200 135L340 85L450 130L600 95L720 140L860 100L980 135L1100 90L1230 130L1340 105L1440 135L1440 180Z"/>
-  </svg>
-  <div class="container hero__inner">
-    <img class="hero__banner" src="img/banner.jpg" width="1960" height="600" fetchpriority="high" alt="BubbaGame online – a realm reborn. 2x EXP, 1x rest, server 7.4.">
-    <div class="hero-dock card card--raised frame">
-      <div class="hero-dock__text">
-        <p class="eyebrow">Tibia 7.4 &middot; 7.72 client &middot; EU</p>
-        <h1 class="display" id="hero-title">Welcome!</h1>
-        <p class="lede">BubbaGame is a 7.4 Tibia server played on the 7.72 client, with classic gameplay and a few custom twists. The server is now <span class="pill pill--green">LIVE</span> and (allegedly) running.</p>
-        <div class="pill-row">
-          <span class="pill pill--green" style="--i:0">2x EXP</span>
-          <span class="pill pill--pink" style="--i:1">1x everything else</span>
-          <span class="pill pill--violet" style="--i:2">Faster spawns</span>
-          <span class="pill pill--gold" style="--i:3">Botting allowed</span>
-          <span class="pill pill--night" style="--i:4">No wipe planned</span>
-        </div>
-        <div class="hero-dock__cta">
-          <button type="button" class="btn btn--primary btn--lg" data-open="register">Play now &ndash; create account</button>
-          <a class="btn btn--ghost btn--lg" href="#clients">Download a client</a>
-          <a href="https://twitch.tv/BubbaGame" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-play"/></svg>Watch live on Twitch</a>
-        </div>
+  <main id="main" class="stage" tabindex="-1">
+
+<!-- Home -->
+<section class="view view--home" id="view-home" data-view="home" aria-labelledby="home-title">
+  <img class="home-banner" src="img/banner.jpg" width="1960" height="600" fetchpriority="high" alt="BubbaGame online – a realm reborn. 2x EXP, 1x rest, server 7.4.">
+  <div class="card card--raised frame home-card">
+    <div class="home-card__text">
+      <p class="eyebrow">Tibia 7.4 &middot; 7.72 client &middot; EU</p>
+      <h1 class="display" id="home-title" tabindex="-1">Welcome!</h1>
+      <p class="lede">BubbaGame is a 7.4 Tibia server played on the 7.72 client, with classic gameplay and a few custom twists. The server is now <span class="pill pill--green">LIVE</span> and (allegedly) running.</p>
+      <div class="pill-row">
+        <span class="pill pill--green">2x EXP</span>
+        <span class="pill pill--pink">1x everything else</span>
+        <span class="pill pill--violet">Faster spawns</span>
+        <span class="pill pill--gold">Botting allowed</span>
+        <span class="pill pill--night">No wipe planned</span>
       </div>
-      <div class="hero-dock__aside">
-        <div class="pulse">
-          <div class="pulse__head"><span class="status"><span class="status-dot" aria-hidden="true"></span>Live</span></div>
-          <p class="pulse__big"><b>2x</b><span>experience</span></p>
-          <dl class="pulse__grid">
-            <div><dt>Server</dt><dd>7.4</dd></div>
-            <div><dt>Serversave</dt><dd>07:00</dd></div>
-            <div><dt>Next save in</dt><dd data-countdown="07:00">--:--:--</dd></div>
-            <div><dt>Location</dt><dd>EU</dd></div>
-          </dl>
-          <div class="pulse__foot">
-            <div class="ipbox ipbox--compact"><code>95.179.145.195</code><button type="button" class="copy-btn" data-copy="95.179.145.195" data-copy-label="IP">Copy</button></div>
-            <span class="faint">Version 772</span>
-          </div>
-        </div>
+      <div class="home-card__cta">
+        <a class="btn btn--primary btn--lg" href="#account">Play now &ndash; create account</a>
+        <a class="btn btn--ghost btn--lg" href="#download">Download a client</a>
+      </div>
+    </div>
+    <div class="home-card__aside">
+      <div class="home-live">
+        <span class="status"><span class="status-dot" aria-hidden="true"></span>Live</span>
+        <p class="home-live__cd"><span class="faint">Serversave in</span><b data-countdown="07:00">--:--:--</b></p>
+        <div class="ipbox"><code>95.179.145.195</code><button type="button" class="copy-btn" data-copy="95.179.145.195" data-copy-label="IP">Copy</button></div>
+        <span class="faint">Version 772</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Download: clients, connect, map -->
-<section class="band band--alt" id="clients" aria-labelledby="clients-title">
-  <div class="container stack">
-    <div class="section-head"><div class="section-head__text"><p class="eyebrow">Download</p><h2 id="clients-title">Which client should I use?</h2><p class="lede">You can choose between two game clients. Pick the one that suits how you play.</p></div></div>
-    <div class="grid-2">
-      <article class="client-card client-card--classic">
-          <p class="eyebrow">Client 1</p>
-          <h3>Tibia 7.72 &ndash; the classic client</h3>
-          <p class="client-card__best"><b>Best for:</b> Playing by hand</p>
-          <ul class="checklist">
-            <li>The original Tibia experience.</li>
-            <li>Recommended if you play by hand.</li>
-            <li>Stable and lightweight.</li>
-          </ul>
-          <div class="client-card__meta"><span class="file-chip">Tibia772.zip</span> <span class="small faint">Hosted on MediaFire</span></div>
-          <a class="btn btn--primary btn--block" href="https://www.mediafire.com/file/wkk4c5mt3vztbk2/Tibia772.zip/file" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg> Download Tibia 7.72</a>
-        </article>
-      <article class="client-card client-card--v8">
-          <p class="eyebrow">Client 2</p>
-          <h3>OTClient v8 &ndash; built-in bot and WASD</h3>
-          <p class="client-card__best"><b>Best for:</b> Botting, WASD and watching casts</p>
-          <ul class="checklist">
-            <li>Botting is allowed on BubbaGame.</li>
-            <li>Comes with a bot, smart walking and WASD movement built in.</li>
-            <li>Also the client to use if you want to watch someone's cast.</li>
-          </ul>
-          <div class="client-card__meta"><span class="file-chip">v8_client_tibia.rar</span> <span class="small faint">Hosted on MediaFire</span></div>
-          <a class="btn btn--violet btn--block" href="https://www.mediafire.com/file/q5s1jmlyd6j3zwf/v8_client_tibia.rar/file" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg> Download v8 client</a>
-        </article>
+<!-- Account -->
+<section class="view" id="view-account" data-view="account" aria-labelledby="account-title" hidden>
+  <header class="view__head"><div><p class="eyebrow">Play</p><h1 id="account-title" tabindex="-1">Account</h1></div></header>
+  <div class="grid-2 grid-2--stretch">
+    <div class="card card--raised">
+      <h2>Create your account</h2>
+      <form class="form" method="post" action="create.php" data-demo-form>
+        <label class="field">Desired account number (numbers only)<input type="text" name="account_number" inputmode="numeric" pattern="[0-9]+" autocomplete="username" required></label>
+        <label class="field">Password<input type="password" name="password" autocomplete="new-password" required></label>
+        <label class="field">Email (optional)<input type="email" name="email" autocomplete="email"></label>
+        <button type="submit" class="btn btn--primary btn--block">Register account</button>
+      </form>
     </div>
-    <div class="callout callout--violet">
-      <svg class="icon" aria-hidden="true"><use href="#i-play"/></svg>
-      <div class="stack">
-        <p>Set the IP to <code>95.179.145.195</code> and the version to <code>772</code>.</p>
-        <div class="cluster">
-          <div class="ipbox"><code>95.179.145.195</code><button type="button" class="copy-btn" data-copy="95.179.145.195" data-copy-label="IP">Copy</button></div>
-          <span class="pill pill--night">Version 772</span>
-        </div>
+    <div class="card card--raised">
+      <h2>Log in to your account</h2>
+      <form class="form" method="post" action="login.php" data-demo-form>
+        <label class="field">Account number<input type="text" name="account_number" inputmode="numeric" autocomplete="username" required></label>
+        <label class="field">Password<input type="password" name="password" autocomplete="current-password" required></label>
+        <button type="submit" class="btn btn--primary btn--block">Log in</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Download -->
+<section class="view" id="view-download" data-view="download" aria-labelledby="download-title" hidden>
+  <header class="view__head"><div><p class="eyebrow">Download</p><h1 id="download-title" tabindex="-1">Which client should I use?</h1></div>
+    <p class="lede">You can choose between two game clients. Pick the one that suits how you play.</p></header>
+  <div class="grid-2 grid-2--stretch">
+    <article class="client-card client-card--classic">
+      <p class="eyebrow">Client 1</p>
+      <h2>Tibia 7.72 &ndash; the classic client</h2>
+      <p class="client-card__best"><b>Best for:</b> Playing by hand</p>
+      <ul class="checklist">
+        <li>The original Tibia experience.</li>
+        <li>Recommended if you play by hand.</li>
+        <li>Stable and lightweight.</li>
+      </ul>
+      <div class="client-card__meta"><span class="file-chip">Tibia772.zip</span> <span class="small faint">Hosted on MediaFire</span></div>
+      <a class="btn btn--primary btn--block" href="https://www.mediafire.com/file/wkk4c5mt3vztbk2/Tibia772.zip/file" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg> Download Tibia 7.72</a>
+    </article>
+    <article class="client-card client-card--v8">
+      <p class="eyebrow">Client 2</p>
+      <h2>OTClient v8 &ndash; built-in bot and WASD</h2>
+      <p class="client-card__best"><b>Best for:</b> Botting, WASD and watching casts</p>
+      <ul class="checklist">
+        <li>Botting is allowed on BubbaGame.</li>
+        <li>Comes with a bot, smart walking and WASD movement built in.</li>
+        <li>Also the client to use if you want to watch someone's cast.</li>
+      </ul>
+      <div class="client-card__meta"><span class="file-chip">v8_client_tibia.rar</span> <span class="small faint">Hosted on MediaFire</span></div>
+      <a class="btn btn--violet btn--block" href="https://www.mediafire.com/file/q5s1jmlyd6j3zwf/v8_client_tibia.rar/file" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg> Download v8 client</a>
+    </article>
+  </div>
+  <div class="callout callout--violet">
+    <svg class="icon" aria-hidden="true"><use href="#i-play"/></svg>
+    <div class="callout__row">
+      <p>Set the IP to <code>95.179.145.195</code> and the version to <code>772</code>.</p>
+      <div class="cluster">
+        <div class="ipbox"><code>95.179.145.195</code><button type="button" class="copy-btn" data-copy="95.179.145.195" data-copy-label="IP">Copy</button></div>
+        <span class="pill pill--night">Version 772</span>
       </div>
     </div>
-    <div class="card stack" id="map">
-      <img class="mascot mascot--md mascot--peek" src="img/mascot-map.svg" width="230" height="250" alt="Where am I?!" loading="lazy">
-      <h3>Full map (optional)</h3>
+  </div>
+</section>
+
+<!-- Full map -->
+<section class="view" id="view-map" data-view="map" aria-labelledby="map-title" hidden>
+  <header class="view__head"><div><p class="eyebrow">Full map</p><h1 id="map-title" tabindex="-1">Full map (optional)</h1></div></header>
+  <div class="card split">
+    <div class="stack">
       <p>Don't want to explore the whole world yourself? Download the full map for your client:</p>
       <div class="cluster">
         <a class="btn btn--primary btn--sm" href="https://www.mediafire.com/file/om2coxvx3z4rij2/772_FULL_MAP.zip/file" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg> Full Map for 7.72 Client</a>
@@ -152,79 +178,70 @@
         <li><b>v8:</b> put the <b>.otmm</b> file in <code>%APPDATA%\OTClientV8\otclientv8</code> <button type="button" class="copy-btn" data-copy="%APPDATA%\OTClientV8\otclientv8" data-copy-label="Path">Copy<span class="sr-only"> path</span></button> (paste that into the Explorer address bar).</li>
       </ul>
       <details class="faq">
-          <summary><span>v8 map reset itself?</span></summary>
-          <div class="faq__body"><p>The v8 client saves the map file when you log out, so a crash or a lost connection during the daily server restart can overwrite it. Keep a copy of the <b>.otmm</b> file somewhere safe and just paste it back if your map is gone. To stop it from ever being overwritten, right-click the <b>.otmm</b> file &rarr; <b>Properties</b> &rarr; tick <b>Read-only</b> (new areas you explore will then not be saved until you untick it).</p></div>
-        </details>
+        <summary><span>v8 map reset itself?</span></summary>
+        <div class="faq__body"><p>The v8 client saves the map file when you log out, so a crash or a lost connection during the daily server restart can overwrite it. Keep a copy of the <b>.otmm</b> file somewhere safe and just paste it back if your map is gone. To stop it from ever being overwritten, right-click the <b>.otmm</b> file &rarr; <b>Properties</b> &rarr; tick <b>Read-only</b> (new areas you explore will then not be saved until you untick it).</p></div>
+      </details>
     </div>
+    <img class="mascot split__art" src="img/mascot-map.svg" width="230" height="250" alt="Where am I?!">
   </div>
 </section>
 
-
-<!-- Performance tips -->
-<section class="band">
-  <div class="container stack">
-<section id="performance" class="stack" aria-labelledby="performance-title">
-      <div class="card stack">
-        <img class="mascot mascot--md mascot--peek" src="img/mascot-warlock.svg" width="220" height="300" alt="Begone, lag!" loading="lazy">
-        <h2 id="performance-title">Still not smooth? A few PC settings that often help the old client</h2>
-        <ol class="tip-list">
-          <li class="tip">
-            <h3>Stuttering?</h3>
-            <p>Make a shortcut to Tibia.exe &rarr; right-click &rarr; <b>Properties</b> &rarr; in <b>Target</b> add <b>engine 1</b> at the very end, after the closing quote: <code>"C:\Games\Tibia772\Tibia.exe" engine 1</code></p>
-            <img class="shot" src="img/engine.jpg" width="187" height="18" alt="Add engine 1 to the shortcut target" loading="lazy">
-          </li>
-          <li class="tip">
-            <h3>Turn off V-Sync for Tibia</h3>
-            <p>NVIDIA Control Panel &rarr; Manage 3D settings &rarr; Program Settings &rarr; add Tibia.exe &rarr; Vertical sync: Off. (AMD: Adrenalin &rarr; Gaming &rarr; Tibia &rarr; Wait for Vertical Refresh: Off.)</p>
-          </li>
-          <li class="tip">
-            <h3>Use your graphics card</h3>
-            <p>Windows Settings &rarr; System &rarr; Display &rarr; Graphics &rarr; add Tibia.exe &rarr; Options &rarr; High performance.</p>
-          </li>
-          <li class="tip">
-            <h3>Disable fullscreen optimizations</h3>
-            <p>Right-click Tibia.exe &rarr; Properties &rarr; Compatibility &rarr; tick "Disable fullscreen optimizations".</p>
-          </li>
-          <li class="tip">
-            <h3>Streaming with OBS?</h3>
-            <p>Use Window Capture instead of Game Capture for the 7.72 client.</p>
-          </li>
-        </ol>
+<!-- Info -->
+<section class="view" id="view-info" data-view="info" aria-labelledby="info-title" hidden>
+  <header class="view__head"><div><p class="eyebrow">Rules</p><h1 id="info-title" tabindex="-1">Good to know</h1></div></header>
+  <div class="info-grid">
+    <div class="rule-grid">
+      <div class="rule-card"><svg class="icon" aria-hidden="true"><use href="#i-trophy"/></svg><p>Experience is 2x, everything else is 1x, and the spawn rate is faster than usual.</p></div>
+      <div class="rule-card"><svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg><p>The server is EU-hosted.</p></div>
+      <div class="rule-card"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg><p>Daily serversave at 07:00 server time &ndash; logins are blocked for the five minutes before it, and the server is back about a minute later.</p></div>
+      <div class="rule-card"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg><p>Botting is allowed and you may play up to 3 accounts.</p></div>
+      <div class="rule-card"><svg class="icon" aria-hidden="true"><use href="#i-crown"/></svg><p>Premium days and shop items are bought under <a href="#shop">Item Shop and Premium Days</a>.</p></div>
+      <div class="rule-card"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><p>No wipe is planned &ndash; your progress stays.</p></div>
+      <div class="rule-card rule-card--wide"><svg class="icon" aria-hidden="true"><use href="#i-alert"/></svg><p><b>Found a bug?</b> Report it to GM BubbaGame in-game or on Discord.</p></div>
+    </div>
+    <div class="info-side">
+      <div class="card newhere">
+        <img class="mascot" src="img/mascot-cyclops.svg" width="230" height="260" alt="Welcome, newbie!">
+        <div>
+          <h2>New here?</h2>
+          <p><b>Need help or want to chat?</b> Open the <b>Game Chat</b> channel in-game to talk with other players, ask questions and share what you know.</p>
+          <p><b>Tasks:</b> You can find tasks at any post office NPC.</p>
+        </div>
       </div>
-    </section>
-  </div>
-</section>
-
-<!-- New here -->
-<section class="band band--alt" aria-labelledby="newhere-title">
-  <div class="container stack">
-    <div class="card newhere">
-      <img class="mascot mascot--md" src="img/mascot-cyclops.svg" width="230" height="260" alt="Welcome, newbie!" loading="lazy">
-      <div>
-        <h3 id="newhere-title">New here?</h3>
-        <p><b>Need help or want to chat?</b> Open the <b>Game Chat</b> channel in-game to talk with other players, ask questions and share what you know.</p>
-        <p><b>Tasks:</b> You can find tasks at any post office NPC.</p>
+      <div class="pill-row pill-row--tight">
+        <span class="pill pill--green">2x EXP</span>
+        <span class="pill pill--pink">1x everything else</span>
+        <span class="pill pill--violet">Faster spawns</span>
+        <span class="pill pill--gold">Botting allowed</span>
+        <span class="pill pill--night">No wipe planned</span>
+        <span class="pill pill--night">Version 7.72 (7.4 server)</span>
+        <span class="pill pill--night">EU hosted</span>
+        <span class="pill pill--night">Daily serversave 07:00 server time</span>
       </div>
     </div>
-  
   </div>
 </section>
 
-<section class="band" id="commands" aria-labelledby="commands-title">
-  <div class="container stack">
-    <div class="section-head"><div class="section-head__text"><p class="eyebrow">In game</p><h2 id="commands-title">Commands</h2></div></div>
-    <p>Type <code>!commands</code> in-game for the full list. The most useful ones:</p>
-    <div class="table-wrap" tabindex="0" role="region" aria-label="Commands table">
-      <table class="cmd-table">
-        <caption class="sr-only">In-game commands</caption>
-        <tbody>
-        <tr class="cmd-table__group"><th colspan="3" scope="colgroup">Looking for someone? Everything is in-game</th></tr>
+<!-- Commands -->
+<section class="view" id="view-commands" data-view="commands" aria-labelledby="commands-title" hidden>
+  <header class="view__head"><div><p class="eyebrow">In game</p><h1 id="commands-title" tabindex="-1">Commands</h1></div>
+    <p class="lede">Type <code>!commands</code> in-game for the full list. The most useful ones:</p></header>
+  <div class="grid-2 grid-2--top">
+    <table class="cmd-table">
+      <caption class="sr-only">Looking for someone? Everything is in-game</caption>
+      <thead><tr class="cmd-table__group"><th colspan="3" scope="colgroup">Looking for someone? Everything is in-game</th></tr></thead>
+      <tbody>
         <tr><td><code>!character "name</code></td><td>level, vocation, city and guild</td><td class="cmd-table__copy"><button type="button" class="copy-btn" data-copy="!character &quot;name" data-copy-label="Command">Copy<span class="sr-only"> !character &quot;name</span></button></td></tr>
         <tr><td><code>!deathlist "name</code></td><td>recent deaths</td><td class="cmd-table__copy"><button type="button" class="copy-btn" data-copy="!deathlist &quot;name" data-copy-label="Command">Copy<span class="sr-only"> !deathlist &quot;name</span></button></td></tr>
         <tr><td><code>!highscore</code></td><td>top 50 (add <code>"magic</code>, <code>"sword</code> &hellip;)</td><td class="cmd-table__copy"><button type="button" class="copy-btn" data-copy="!highscore" data-copy-label="Command">Copy<span class="sr-only"> !highscore</span></button></td></tr>
         <tr><td><code>!guildlist</code></td><td>all guilds</td><td class="cmd-table__copy"><button type="button" class="copy-btn" data-copy="!guildlist" data-copy-label="Command">Copy<span class="sr-only"> !guildlist</span></button></td></tr>
         <tr><td><code>!guildinfo "name</code></td><td>members of a guild</td><td class="cmd-table__copy"><button type="button" class="copy-btn" data-copy="!guildinfo &quot;name" data-copy-label="Command">Copy<span class="sr-only"> !guildinfo &quot;name</span></button></td></tr>
-        <tr class="cmd-table__group"><th colspan="3" scope="colgroup">Most useful</th></tr>
+      </tbody>
+    </table>
+    <table class="cmd-table">
+      <caption class="sr-only">Most useful</caption>
+      <thead><tr class="cmd-table__group"><th colspan="3" scope="colgroup">Most useful</th></tr></thead>
+      <tbody>
         <tr><td><code>!online</code></td><td>who is playing right now</td><td class="cmd-table__copy"><button type="button" class="copy-btn" data-copy="!online" data-copy-label="Command">Copy<span class="sr-only"> !online</span></button></td></tr>
         <tr><td><code>!tasklist</code></td><td>every kill task, <code>!task</code> shows your current one</td><td class="cmd-table__copy"><button type="button" class="copy-btn" data-copy="!tasklist" data-copy-label="Command">Copy<span class="sr-only"> !tasklist</span></button></td></tr>
         <tr><td><code>!highscore</code> and <code>!character "name</code></td><td>top lists and character info</td><td class="cmd-table__copy"></td></tr>
@@ -233,111 +250,256 @@
         <tr><td><code>!guild</code></td><td>found a guild, <code>!buyhouse</code> while facing a house door</td><td class="cmd-table__copy"><button type="button" class="copy-btn" data-copy="!guild" data-copy-label="Command">Copy<span class="sr-only"> !guild</span></button></td></tr>
         <tr><td><code>!share</code></td><td>toggle experience sharing in a party</td><td class="cmd-table__copy"><button type="button" class="copy-btn" data-copy="!share" data-copy-label="Command">Copy<span class="sr-only"> !share</span></button></td></tr>
         <tr><td><code>!cast</code></td><td>stream your gameplay to other players</td><td class="cmd-table__copy"><button type="button" class="copy-btn" data-copy="!cast" data-copy-label="Command">Copy<span class="sr-only"> !cast</span></button></td></tr>
-        </tbody>
-      </table>
-    </div>
+      </tbody>
+    </table>
   </div>
 </section>
-<section class="band band--alt" id="rules" aria-labelledby="rules-title">
-  <div class="container stack">
-    <div class="section-head"><div class="section-head__text"><p class="eyebrow">Rules</p><h2 id="rules-title">Good to know</h2></div></div>
-    <div class="grid-2">
-    <div class="rule-card"><svg class="icon" aria-hidden="true"><use href="#i-trophy"/></svg><p>Experience is 2x, everything else is 1x, and the spawn rate is faster than usual.</p></div>
-    <div class="rule-card"><svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg><p>The server is EU-hosted.</p></div>
-    <div class="rule-card"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg><p>Daily serversave at 07:00 server time &ndash; logins are blocked for the five minutes before it, and the server is back about a minute later.</p></div>
-    <div class="rule-card"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg><p>Botting is allowed and you may play up to 3 accounts.</p></div>
-    <div class="rule-card"><svg class="icon" aria-hidden="true"><use href="#i-crown"/></svg><p>Premium days and shop items are bought under <a href="shop.html">Item Shop and Premium Days</a>.</p></div>
-    <div class="rule-card"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><p>No wipe is planned &ndash; your progress stays.</p></div>
-    <div class="rule-card"><svg class="icon" aria-hidden="true"><use href="#i-alert"/></svg><p><b>Found a bug?</b> Report it to GM BubbaGame in-game or on Discord.</p></div>
+
+<!-- Fix lag -->
+<section class="view" id="view-lag" data-view="lag" aria-labelledby="lag-title" hidden>
+  <header class="view__head"><div><p class="eyebrow">Fix lag</p><h1 id="lag-title" tabindex="-1">Still not smooth? A few PC settings that often help the old client</h1></div></header>
+  <div class="split split--top">
+    <ol class="tip-list">
+      <li class="tip tip--first">
+        <h2>Stuttering?</h2>
+        <p>Make a shortcut to Tibia.exe &rarr; right-click &rarr; <b>Properties</b> &rarr; in <b>Target</b> add <b>engine 1</b> at the very end, after the closing quote: <code>"C:\Games\Tibia772\Tibia.exe" engine 1</code></p>
+        <img class="shot" src="img/engine.jpg" width="187" height="18" alt="Add engine 1 to the shortcut target">
+      </li>
+      <li class="tip">
+        <h2>Turn off V-Sync for Tibia</h2>
+        <p>NVIDIA Control Panel &rarr; Manage 3D settings &rarr; Program Settings &rarr; add Tibia.exe &rarr; Vertical sync: Off. (AMD: Adrenalin &rarr; Gaming &rarr; Tibia &rarr; Wait for Vertical Refresh: Off.)</p>
+      </li>
+      <li class="tip">
+        <h2>Use your graphics card</h2>
+        <p>Windows Settings &rarr; System &rarr; Display &rarr; Graphics &rarr; add Tibia.exe &rarr; Options &rarr; High performance.</p>
+      </li>
+      <li class="tip">
+        <h2>Disable fullscreen optimizations</h2>
+        <p>Right-click Tibia.exe &rarr; Properties &rarr; Compatibility &rarr; tick "Disable fullscreen optimizations".</p>
+      </li>
+      <li class="tip">
+        <h2>Streaming with OBS?</h2>
+        <p>Use Window Capture instead of Game Capture for the 7.72 client.</p>
+      </li>
+    </ol>
+    <img class="mascot split__art" src="img/mascot-warlock.svg" width="220" height="300" alt="Begone, lag!">
+  </div>
+</section>
+
+<!-- Premium -->
+<section class="view" id="view-premium" data-view="premium" aria-labelledby="premium-title" hidden>
+  <header class="view__head"><div><p class="eyebrow">Premium</p><h1 id="premium-title" tabindex="-1">Premium benefits</h1></div></header>
+  <div class="card card--raised frame split premium">
+    <ul class="checklist checklist--big">
+      <li>Access to premium spells.</li>
+      <li>Travel by boat.</li>
+      <li>Buy and own a house.</li>
+      <li>Full health and mana when you level up.</li>
+      <li>Loot window.</li>
+      <li>Make runes without holding a blank rune in your hand.</li>
+      <li>5% extra experience.</li>
+    </ul>
+    <div class="premium__aside">
+      <img class="mascot" src="img/mascot-boat.svg" width="240" height="250" alt="Premium cruise!">
+      <div class="cluster"><a class="btn btn--primary" href="#shop">See the shop</a><a class="btn btn--ghost" href="#donate">How to buy</a></div>
     </div>
   </div>
 </section>
 
-<!-- 6. Premium teaser -->
-<section class="band" aria-labelledby="prem-title">
-  <div class="container">
-    <div class="card card--raised frame premium">
-      <div>
-        <p class="eyebrow">Premium</p>
-        <h2 id="prem-title">Premium benefits</h2>
-        <ul class="checklist checklist--2col">
-            <li>Access to premium spells.</li>
-            <li>Travel by boat.</li>
-            <li>Buy and own a house.</li>
-            <li>Full health and mana when you level up.</li>
-            <li>Loot window.</li>
-            <li>Make runes without holding a blank rune in your hand.</li>
-            <li>5% extra experience.</li>
-        </ul>
+<!-- Item shop -->
+<section class="view view--shop" id="view-shop" data-view="shop" aria-labelledby="shop-title" hidden>
+  <header class="view__head"><div><p class="eyebrow">Shop</p><h1 id="shop-title" tabindex="-1">Item shop &amp; Premium Days</h1></div>
+    <p class="lede">Premium Days are used to buy everything in the shop below.</p></header>
+  <div class="shop-top">
+    <div class="callout callout--gold">
+      <svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg>
+      <div class="callout__row">
+        <p><b>How ordering works right now:</b> automated web shop purchases are offline &ndash; premium orders are handled manually by the admin.</p>
+        <a class="btn btn--primary btn--sm" href="#donate">How to order</a>
       </div>
-      <div class="premium__aside">
-        <img class="mascot mascot--lg" src="img/mascot-boat.svg" width="240" height="250" alt="Premium cruise!" loading="lazy">
-        <div class="cluster"><a class="btn btn--primary" href="shop.html">See the shop</a><a class="btn btn--ghost" href="donate.html">How to buy</a></div>
-      </div>
     </div>
+    <ul class="packs" aria-label="Premium Days">
+      <li class="pack"><h2>30 Days</h2><p class="pack__price">50 SEK</p><p class="pack__approx">(~&euro;4.50)</p></li>
+      <li class="pack"><h2>90 Days</h2><p class="pack__price">150 SEK</p><p class="pack__approx">(~&euro;13.50)</p></li>
+      <li class="pack"><h2>180 Days</h2><p class="pack__price">300 SEK</p><p class="pack__approx">(~&euro;27)</p></li>
+    </ul>
+  </div>
+  <div class="toolbar">
+    <div class="chips" role="group" aria-label="Filter items by category">
+      <button type="button" class="chip" data-filter-group="shop" data-filter="all" aria-pressed="true">All <span class="chip__count">23</span></button>
+      <button type="button" class="chip" data-filter-group="shop" data-filter="Scrolls" aria-pressed="false">Scrolls <span class="chip__count">7</span></button>
+      <button type="button" class="chip" data-filter-group="shop" data-filter="Runes" aria-pressed="false">Runes <span class="chip__count">8</span></button>
+      <button type="button" class="chip" data-filter-group="shop" data-filter="Boxes &amp; Lamps" aria-pressed="false">Boxes &amp; Lamps <span class="chip__count">5</span></button>
+      <button type="button" class="chip" data-filter-group="shop" data-filter="Gear" aria-pressed="false">Gear <span class="chip__count">3</span></button>
+    </div>
+    <p class="small toolbar__note">Log in to buy Premium Days or see your balance. <a href="#account">Log in</a> or <a href="#account">create an account</a>.</p>
+    <p class="sr-only" role="status" data-filter-count="shop" data-noun="items">Showing 23 items</p>
+  </div>
+  <div class="shop-grid" id="shop-grid">
+        <article class="shop-item shop-item--scrolls" data-filter-item="shop" data-cat="Scrolls">
+          <span class="shop-item__tag">Scrolls</span>
+          <h3>Postman Scroll</h3>
+          <div class="shop-item__foot"><p class="price"><svg class="icon" aria-hidden="true"><use href="#i-coin"/></svg><b>10</b> Premium Days</p><a class="shop-item__buy" href="#account"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg>Log in to buy</a></div>
+        </article>
+        <article class="shop-item shop-item--gear" data-filter-item="shop" data-cat="Gear">
+          <span class="shop-item__tag">Gear</span>
+          <h3>Stone Skin Amulet (x3)</h3>
+          <div class="shop-item__foot"><p class="price"><svg class="icon" aria-hidden="true"><use href="#i-coin"/></svg><b>10</b> Premium Days</p><a class="shop-item__buy" href="#account"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg>Log in to buy</a></div>
+        </article>
+        <article class="shop-item shop-item--boxes" data-filter-item="shop" data-cat="Boxes &amp; Lamps">
+          <span class="shop-item__tag">Boxes &amp; Lamps</span>
+          <h3>Pandoras Box</h3>
+          <div class="shop-item__foot"><p class="price"><svg class="icon" aria-hidden="true"><use href="#i-coin"/></svg><b>10</b> Premium Days</p><a class="shop-item__buy" href="#account"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg>Log in to buy</a></div>
+        </article>
+        <article class="shop-item shop-item--boxes" data-filter-item="shop" data-cat="Boxes &amp; Lamps">
+          <span class="shop-item__tag">Boxes &amp; Lamps</span>
+          <h3>Pandoras Box 2.0</h3>
+          <div class="shop-item__foot"><p class="price"><svg class="icon" aria-hidden="true"><use href="#i-coin"/></svg><b>20</b> Premium Days</p><a class="shop-item__buy" href="#account"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg>Log in to buy</a></div>
+        </article>
+        <article class="shop-item shop-item--scrolls" data-filter-item="shop" data-cat="Scrolls">
+          <span class="shop-item__tag">Scrolls</span>
+          <h3>Exp Boost Scroll</h3>
+          <div class="shop-item__foot"><p class="price"><svg class="icon" aria-hidden="true"><use href="#i-coin"/></svg><b>10</b> Premium Days</p><a class="shop-item__buy" href="#account"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg>Log in to buy</a></div>
+        </article>
+        <article class="shop-item shop-item--runes" data-filter-item="shop" data-cat="Runes">
+          <span class="shop-item__tag">Runes</span>
+          <h3>Ultimate Healing Rune (x100)</h3>
+          <div class="shop-item__foot"><p class="price"><svg class="icon" aria-hidden="true"><use href="#i-coin"/></svg><b>10</b> Premium Days</p><a class="shop-item__buy" href="#account"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg>Log in to buy</a></div>
+        </article>
+        <article class="shop-item shop-item--runes" data-filter-item="shop" data-cat="Runes">
+          <span class="shop-item__tag">Runes</span>
+          <h3>Sudden Death Rune (x100)</h3>
+          <div class="shop-item__foot"><p class="price"><svg class="icon" aria-hidden="true"><use href="#i-coin"/></svg><b>20</b> Premium Days</p><a class="shop-item__buy" href="#account"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg>Log in to buy</a></div>
+        </article>
+        <article class="shop-item shop-item--runes" data-filter-item="shop" data-cat="Runes">
+          <span class="shop-item__tag">Runes</span>
+          <h3>Explosion Rune (x100)</h3>
+          <div class="shop-item__foot"><p class="price"><svg class="icon" aria-hidden="true"><use href="#i-coin"/></svg><b>10</b> Premium Days</p><a class="shop-item__buy" href="#account"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg>Log in to buy</a></div>
+        </article>
+        <article class="shop-item shop-item--runes" data-filter-item="shop" data-cat="Runes">
+          <span class="shop-item__tag">Runes</span>
+          <h3>Great Fireball Rune (x100)</h3>
+          <div class="shop-item__foot"><p class="price"><svg class="icon" aria-hidden="true"><use href="#i-coin"/></svg><b>10</b> Premium Days</p><a class="shop-item__buy" href="#account"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg>Log in to buy</a></div>
+        </article>
+        <article class="shop-item shop-item--runes" data-filter-item="shop" data-cat="Runes">
+          <span class="shop-item__tag">Runes</span>
+          <h3>Mana Rune (x100)</h3>
+          <div class="shop-item__foot"><p class="price"><svg class="icon" aria-hidden="true"><use href="#i-coin"/></svg><b>10</b> Premium Days</p><a class="shop-item__buy" href="#account"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg>Log in to buy</a></div>
+        </article>
+        <article class="shop-item shop-item--runes" data-filter-item="shop" data-cat="Runes">
+          <span class="shop-item__tag">Runes</span>
+          <h3>Greater Mana Rune (x100)</h3>
+          <div class="shop-item__foot"><p class="price"><svg class="icon" aria-hidden="true"><use href="#i-coin"/></svg><b>20</b> Premium Days</p><a class="shop-item__buy" href="#account"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg>Log in to buy</a></div>
+        </article>
+        <article class="shop-item shop-item--runes" data-filter-item="shop" data-cat="Runes">
+          <span class="shop-item__tag">Runes</span>
+          <h3>Heavy Magic Missile Rune (x100)</h3>
+          <div class="shop-item__foot"><p class="price"><svg class="icon" aria-hidden="true"><use href="#i-coin"/></svg><b>5</b> Premium Days</p><a class="shop-item__buy" href="#account"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg>Log in to buy</a></div>
+        </article>
+        <article class="shop-item shop-item--scrolls" data-filter-item="shop" data-cat="Scrolls">
+          <span class="shop-item__tag">Scrolls</span>
+          <h3>Change Gold Scroll (7 days)</h3>
+          <div class="shop-item__foot"><p class="price"><svg class="icon" aria-hidden="true"><use href="#i-coin"/></svg><b>5</b> Premium Days</p><a class="shop-item__buy" href="#account"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg>Log in to buy</a></div>
+        </article>
+        <article class="shop-item shop-item--scrolls" data-filter-item="shop" data-cat="Scrolls">
+          <span class="shop-item__tag">Scrolls</span>
+          <h3>Change Gold Scroll (30 days)</h3>
+          <div class="shop-item__foot"><p class="price"><svg class="icon" aria-hidden="true"><use href="#i-coin"/></svg><b>15</b> Premium Days</p><a class="shop-item__buy" href="#account"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg>Log in to buy</a></div>
+        </article>
+        <article class="shop-item shop-item--scrolls" data-filter-item="shop" data-cat="Scrolls">
+          <span class="shop-item__tag">Scrolls</span>
+          <h3>Premium Scroll (7 days)</h3>
+          <div class="shop-item__foot"><p class="price"><svg class="icon" aria-hidden="true"><use href="#i-coin"/></svg><b>10</b> Premium Days</p><a class="shop-item__buy" href="#account"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg>Log in to buy</a></div>
+        </article>
+        <article class="shop-item shop-item--scrolls" data-filter-item="shop" data-cat="Scrolls">
+          <span class="shop-item__tag">Scrolls</span>
+          <h3>Premium Scroll (30 days)</h3>
+          <div class="shop-item__foot"><p class="price"><svg class="icon" aria-hidden="true"><use href="#i-coin"/></svg><b>30</b> Premium Days</p><a class="shop-item__buy" href="#account"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg>Log in to buy</a></div>
+        </article>
+        <article class="shop-item shop-item--boxes" data-filter-item="shop" data-cat="Boxes &amp; Lamps">
+          <span class="shop-item__tag">Boxes &amp; Lamps</span>
+          <h3>Rashid Lamp</h3>
+          <div class="shop-item__foot"><p class="price"><svg class="icon" aria-hidden="true"><use href="#i-coin"/></svg><b>20</b> Premium Days</p><a class="shop-item__buy" href="#account"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg>Log in to buy</a></div>
+        </article>
+        <article class="shop-item shop-item--boxes" data-filter-item="shop" data-cat="Boxes &amp; Lamps">
+          <span class="shop-item__tag">Boxes &amp; Lamps</span>
+          <h3>Green Djinn Lamp</h3>
+          <div class="shop-item__foot"><p class="price"><svg class="icon" aria-hidden="true"><use href="#i-coin"/></svg><b>20</b> Premium Days</p><a class="shop-item__buy" href="#account"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg>Log in to buy</a></div>
+        </article>
+        <article class="shop-item shop-item--boxes" data-filter-item="shop" data-cat="Boxes &amp; Lamps">
+          <span class="shop-item__tag">Boxes &amp; Lamps</span>
+          <h3>Blue Djinn Lamp</h3>
+          <div class="shop-item__foot"><p class="price"><svg class="icon" aria-hidden="true"><use href="#i-coin"/></svg><b>20</b> Premium Days</p><a class="shop-item__buy" href="#account"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg>Log in to buy</a></div>
+        </article>
+        <article class="shop-item shop-item--runes" data-filter-item="shop" data-cat="Runes">
+          <span class="shop-item__tag">Runes</span>
+          <h3>Temple Recall Rune (x3)</h3>
+          <div class="shop-item__foot"><p class="price"><svg class="icon" aria-hidden="true"><use href="#i-coin"/></svg><b>10</b> Premium Days</p><a class="shop-item__buy" href="#account"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg>Log in to buy</a></div>
+        </article>
+        <article class="shop-item shop-item--gear" data-filter-item="shop" data-cat="Gear">
+          <span class="shop-item__tag">Gear</span>
+          <h3>Oldschool Backpack</h3>
+          <div class="shop-item__foot"><p class="price"><svg class="icon" aria-hidden="true"><use href="#i-coin"/></svg><b>10</b> Premium Days</p><a class="shop-item__buy" href="#account"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg>Log in to buy</a></div>
+        </article>
+        <article class="shop-item shop-item--scrolls" data-filter-item="shop" data-cat="Scrolls">
+          <span class="shop-item__tag">Scrolls</span>
+          <h3>Blessing Scroll</h3>
+          <div class="shop-item__foot"><p class="price"><svg class="icon" aria-hidden="true"><use href="#i-coin"/></svg><b>10</b> Premium Days</p><a class="shop-item__buy" href="#account"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg>Log in to buy</a></div>
+        </article>
+        <article class="shop-item shop-item--gear" data-filter-item="shop" data-cat="Gear">
+          <span class="shop-item__tag">Gear</span>
+          <h3>Key Ring</h3>
+          <div class="shop-item__foot"><p class="price"><svg class="icon" aria-hidden="true"><use href="#i-coin"/></svg><b>10</b> Premium Days</p><a class="shop-item__buy" href="#account"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg>Log in to buy</a></div>
+        </article>
   </div>
 </section>
 
-<!-- 8. Watch & talk -->
-<section class="band band--alt" aria-labelledby="talk-title">
-  <div class="container">
-    <div class="section-head"><div class="section-head__text"><p class="eyebrow">Community</p><h2 id="talk-title">Watch &amp; talk</h2></div></div>
-    <div class="grid-2">
-      <div class="card talk"><svg class="icon" aria-hidden="true"><use href="#i-stream"/></svg><div><h3>Twitch</h3><p>Watch BubbaGame live on Twitch.</p><a class="btn btn--twitch" href="https://twitch.tv/BubbaGame" rel="noopener">Watch live on Twitch</a></div></div>
-      <div class="card talk"><svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg><div><h3>Discord</h3><p>Report bugs to GM BubbaGame in-game or on Discord.</p>
-        <a class="btn btn--ghost" href="https://discordapp.com/invite/hm93u26" rel="noopener">Join Discord</a></div></div>
+<!-- Donate -->
+<section class="view" id="view-donate" data-view="donate" aria-labelledby="donate-title" hidden>
+  <header class="view__head"><div><p class="eyebrow">Donate</p><h1 id="donate-title" tabindex="-1">Donate &amp; buy Premium</h1></div>
+    <p class="lede">Automated web shop purchases are offline. All premium scroll orders are handled manually by the administration to ensure secure processing.</p></header>
+  <section class="card card--raised frame" aria-labelledby="order-title">
+    <div class="card__head"><p class="eyebrow">Step by step</p><h2 id="order-title">How to order</h2></div>
+    <ol class="order-steps">
+      <li class="step"><span class="step__num">1</span><div class="step__body"><h3>Contact GM BubbaGame in game</h3><p>Contact me in game, GM BubbaGame. This can only be done when I'm online.</p></div></li>
+      <li class="step"><span class="step__num">2</span><div class="step__body"><h3>Choose how to pay</h3><p>You can pay via the methods below. Perhaps other ways too &ndash; ask me!</p></div></li>
+      <li class="step"><span class="step__num">3</span><div class="step__body"><h3>Get it in person</h3><p>I will come to you personally.</p></div></li>
+    </ol>
+  </section>
+  <section class="donate-pay" aria-labelledby="payment-title">
+    <div class="view__head view__head--sub"><div><p class="eyebrow">Payment</p><h2 id="payment-title">Contact BubbaGame for purchase</h2></div><p class="lede">You can pay via:</p>
+      <a class="donate-pay__link" href="#shop">See all shop items &rarr;</a></div>
+    <div class="grid-3">
+      <div class="pay-card pay-card--green"><h3>Tibia Coins (Real Tibia)</h3></div>
+      <div class="pay-card pay-card--gold"><h3>Crypto</h3></div>
+      <div class="pay-card pay-card--twitch"><h3>Twitch Subscriptions/Donations</h3>
+        <div class="cluster"><a class="btn btn--twitch btn--sm" href="https://twitch.tv/BubbaGame" rel="noopener">BubbaGame on Twitch</a>
+        <a class="btn btn--primary btn--sm" href="https://streamelements.com/bubbagame/tip" rel="noopener">Tip on StreamElements</a></div></div>
     </div>
+    <p class="donate-pay__more">Perhaps other ways too &ndash; ask me!</p>
+  </section>
+  <div class="callout callout--ember">
+    <svg class="icon" aria-hidden="true"><use href="#i-alert"/></svg>
+    <div><b>Important:</b> Contact me in game, <b>GM BubbaGame</b>, and I will come to you personally (can only be done when I'm online).</div>
   </div>
 </section>
 
-</main>
-
-
-<footer class="site-footer">
-  <img class="mascot mascot--sm site-footer__peek" src="img/mascot-cyclops.svg" width="230" height="260" alt="" loading="lazy">
-  <div class="container site-footer__grid">
-    <div class="site-footer__brand">
-      <a class="brand" href="index.html"><img src="favicon.png" width="36" height="36" alt=""><span class="brand__name">BubbaGame</span></a>
-      <p class="eyebrow">A Realm Reborn</p>
-      <p>Found a bug? Report it to GM BubbaGame in-game or on Discord.</p>
-      <!-- CONFIRM: non-affiliation wording with the owner -->
-      <p class="small">BubbaGame is a fan-run server and is not affiliated with CipSoft GmbH.</p>
-    </div>
-    <nav aria-label="Play"><h2 class="site-footer__title">Play</h2><ul>
-      <li><a href="index.html#clients">Download</a></li><li><a href="shop.html">Shop</a></li><li><a href="donate.html">Donate</a></li></ul></nav>
-    <nav aria-label="Community"><h2 class="site-footer__title">Community</h2><ul>
-      <li><a href="https://twitch.tv/BubbaGame" rel="noopener">Watch on Twitch</a></li>
-      <li><a href="https://discordapp.com/invite/hm93u26" rel="noopener">Discord</a></li></ul></nav>
-    <div><h2 class="site-footer__title">Server</h2>
-      <div class="ipbox ipbox--compact"><code>95.179.145.195</code><button type="button" class="copy-btn" data-copy="95.179.145.195" data-copy-label="IP">Copy</button></div>
-      <ul class="site-footer__facts"><li>Version 7.72 (7.4 server)</li><li>EU hosted</li><li>Daily serversave 07:00 server time</li></ul></div>
+<!-- Contact -->
+<section class="view" id="view-contact" data-view="contact" aria-labelledby="contact-title" hidden>
+  <header class="view__head"><div><p class="eyebrow">Community</p><h1 id="contact-title" tabindex="-1">Contact</h1></div></header>
+  <div class="grid-3 grid-3--stretch">
+    <div class="card talk"><svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg><div><h2>Discord</h2><p>Report bugs to GM BubbaGame in-game or on Discord.</p><a class="btn btn--violet" href="https://discordapp.com/invite/hm93u26" rel="noopener">Join Discord</a></div></div>
+    <div class="card talk"><svg class="icon" aria-hidden="true"><use href="#i-stream"/></svg><div><h2>Twitch</h2><p>Watch BubbaGame live on Twitch.</p><a class="btn btn--twitch" href="https://twitch.tv/BubbaGame" rel="noopener">Watch live on Twitch</a></div></div>
+    <div class="card talk"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg><div><h2>In game</h2><p>Contact me in game, GM BubbaGame. This can only be done when I'm online.</p></div></div>
   </div>
-  <div class="container site-footer__bottom">
-    <span>&copy; BubbaGame</span><span>Concept preview by Four Corners Games. Design and code &copy; 2026 Four Corners Games, not licensed for use.</span>
+  <div class="callout callout--ember">
+    <svg class="icon" aria-hidden="true"><use href="#i-alert"/></svg>
+    <div><b>Found a bug?</b> Report it to GM BubbaGame in-game or on Discord.</div>
   </div>
-</footer>
+</section>
 
-<dialog class="dialog" id="login-dialog" aria-labelledby="login-title">
-  <button type="button" class="dialog__close" data-close aria-label="Close"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button>
-  <h2 id="login-title">Log in to your account</h2>
-  <form class="form" method="post" action="login.php" data-demo-form>
-    <label class="field">Account number<input type="text" name="account_number" inputmode="numeric" autocomplete="username" required></label>
-    <label class="field">Password<input type="password" name="password" autocomplete="current-password" required></label>
-    <button type="submit" class="btn btn--primary btn--block">Log in</button>
-    <p class="small">No account yet? <button type="button" class="link-btn" data-open="register">Create one</button></p>
-  </form>
-</dialog>
-<dialog class="dialog" id="register-dialog" aria-labelledby="register-title">
-  <button type="button" class="dialog__close" data-close aria-label="Close"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button>
-  <h2 id="register-title">Create your account</h2>
-  <form class="form" method="post" action="create.php" data-demo-form>
-    <label class="field">Desired account number (numbers only)<input type="text" name="account_number" inputmode="numeric" pattern="[0-9]+" autocomplete="username" required></label>
-    <label class="field">Password<input type="password" name="password" autocomplete="new-password" required></label>
-    <label class="field">Email (optional)<input type="email" name="email" autocomplete="email"></label>
-    <button type="submit" class="btn btn--primary btn--block">Register account</button>
-    <p class="small">Already have one? <button type="button" class="link-btn" data-open="login">Log in</button></p>
-  </form>
-</dialog>
+  </main>
+</div>
 <div id="live" class="sr-only" aria-live="polite"></div>
 <div class="toast-region" aria-live="polite"></div>
 </body></html>
