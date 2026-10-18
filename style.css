@@ -441,6 +441,12 @@ h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.15; l
 .stage.wide .cat { width: 30%; left: -10%; bottom: -26%; }
 .stage .treat { position: absolute; width: 22%; right: -3%; top: -17%; filter: drop-shadow(0 8px 10px rgb(60 30 10 / 0.25)); animation: spin 6s ease-in-out infinite; }
 
+/* landscape screenshots, two side by side (one a row on phones) */
+.shots { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.shots figure { margin: 0; }
+.shots img { border-radius: 16px; aspect-ratio: 16 / 9; width: 100%; object-fit: cover; box-shadow: var(--shadow); border: 1px solid var(--line); }
+.shots figcaption { text-align: center; color: var(--muted); font-size: 0.9rem; margin-top: 10px; }
+
 /* a row of characters, each with a name and a line about them */
 .cast { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .cast figure { margin: 0; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px 16px 18px; text-align: center; box-shadow: var(--shadow); }
@@ -613,6 +619,7 @@ footer.site .base { max-width: var(--max); margin: 0 auto; padding: 18px 24px 40
 	.band p { margin-inline: auto; }
 	.links { grid-template-columns: 1fr; }
 	.cast { grid-template-columns: 1fr 1fr; gap: 12px; }
+	.shots { grid-template-columns: 1fr; }
 	.gallery { padding-inline: 16px; margin-inline: -16px; grid-auto-columns: 62%; }
 	.doc { padding: 36px 16px 32px; }
 	footer.site .cols { padding: 36px 16px 20px; }
