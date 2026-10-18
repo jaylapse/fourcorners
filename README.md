@@ -15,6 +15,11 @@ each links to its other-language twin.
 /fr/yarntoss/          French game page
 /fr/yarntoss/confidentialite.html, conditions.html, supprimer-compte.html
 /yarntoss/img/         game art (webp) for the game page and home card
+/catcafe/              CatCafe game page (working name; the game's repo is jaylapse/Bakery)
+/catcafe/privacy.html, terms.html, delete-account.html
+/fr/catcafe/           French game page
+/fr/catcafe/confidentialite.html, conditions.html, supprimer-compte.html
+/catcafe/img/          CatCafe art (webp), made from the game's own PNGs
 /assets/fonts/         self-hosted Lato (studio) and Baloo 2 (YarnToss), with their OFL licences
 /brand/                logo files and the logo animation script
 /404.html
@@ -42,10 +47,23 @@ account-deletion page if it has accounts. To add a game:
 2. Rewrite the privacy policy for what the new game actually does (data,
    services, ages, purchases, ads). Keep the shared parts (who we are, your
    rights, the CAI, security, contact).
-3. Add a `.theme-<game>` block in `style.css` (colours and display font) and
-   put it on each page's `<body>`.
+3. Add a `.theme-<game>` block in `style.css` (colours and display font, plus
+   the game-page tokens `--pop`, `--ink`, `--go`, `--go-shade`) and put it on
+   each page's `<body>`.
 4. Add the game to the Games section of both home pages and to every page's
    footer.
+
+## CatCafe
+
+CatCafe is the working name of the cat bakery game (`ca.fourcornersgames.catcafe`,
+Firebase project `catcafe-97a16`). If the name changes, change the page text,
+not the `/catcafe/` URLs: the Play Console and the game's Google sign-in screen
+link to them. Its legal pages already describe rewarded ads (AdMob) and Google
+Play purchases (Sprinkles, No Ads, Bakery Club), which the game adds in its M4
+milestone; update them if what ships differs. There is no store listing art
+yet: `catcafe/img/` is the app icon, characters and the village picture from
+`assets/art/` in the game's repo, and `feature.webp` / `og.jpg` are made from
+them. Swap in real screenshots and the feature graphic once they exist.
 
 ## Game art
 

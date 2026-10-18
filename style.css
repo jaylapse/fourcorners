@@ -3,7 +3,9 @@
 
    Studio pages use the neutral studio look (Lato, blue accent). A game's
    pages add a theme class on <body> (e.g. .theme-yarntoss) that swaps the
-   colour tokens and display font for that game's own. */
+   colour tokens and display font for that game's own. The game page also
+   reads four game tokens: --pop (the title and number badges), --ink (their
+   outline), and --go / --go-shade (the hero's main button). */
 
 @font-face {
 	font-family: "Lato";
@@ -62,9 +64,10 @@
 	--accent: #c9483c;
 	--accent-soft: #fde6df;
 	--on-accent: #ffffff;
-	--yarn-yellow: #fbd94b;
-	--yarn-green: #58b44c;
-	--yarn-outline: #3a2410;
+	--pop: #fbd94b;
+	--ink: #3a2410;
+	--go: #58b44c;
+	--go-shade: #3c8a33;
 	--shadow: 0 1px 2px rgb(80 50 20 / 0.08), 0 14px 34px -14px rgb(80 50 20 / 0.3);
 	--display: "Baloo 2", system-ui, sans-serif;
 }
@@ -82,6 +85,39 @@
 	}
 }
 
+/* CatCafe: the bakery's cream, terracotta and sage, the icon's peach, and
+   Baloo 2 (the game's own font too). */
+.theme-catcafe {
+	--bg: #fdf8ef;
+	--surface: #f6ecdc;
+	--card: #fffdf8;
+	--fg: #3b2a1f;
+	--muted: #776354;
+	--line: #ecdfca;
+	--accent: #b5532c;
+	--accent-soft: #fbe4d5;
+	--on-accent: #ffffff;
+	--pop: #f7b36b;
+	--ink: #3b2416;
+	--go: #4f7d45;
+	--go-shade: #3a5f33;
+	--shadow: 0 1px 2px rgb(80 50 20 / 0.08), 0 14px 34px -14px rgb(80 50 20 / 0.3);
+	--display: "Baloo 2", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+	.theme-catcafe {
+		--bg: #1b1714;
+		--surface: #241e19;
+		--card: #29221c;
+		--fg: #f4eadc;
+		--muted: #b9a693;
+		--line: #3a3028;
+		--accent: #f2a07c;
+		--accent-soft: #3a241b;
+		--on-accent: #1b1714;
+	}
+}
+
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: 84px; }
 body {
@@ -96,7 +132,8 @@ img { max-width: 100%; height: auto; display: block; }
 a { color: var(--accent); text-underline-offset: 3px; text-decoration-thickness: 1px; }
 a:hover { text-decoration-thickness: 2px; }
 h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.15; letter-spacing: -0.015em; margin: 0; }
-.theme-yarntoss h1, .theme-yarntoss h2, .theme-yarntoss h3 { font-weight: 800; letter-spacing: 0; }
+.theme-yarntoss h1, .theme-yarntoss h2, .theme-yarntoss h3,
+.theme-catcafe h1, .theme-catcafe h2, .theme-catcafe h3 { font-weight: 800; letter-spacing: 0; }
 .wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
 .skip { position: absolute; left: -999px; top: 8px; background: var(--card); padding: 8px 14px; border-radius: 8px; z-index: 20; }
 .skip:focus { left: 8px; }
@@ -274,6 +311,7 @@ h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.15; l
 	transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 .game-card:hover { transform: translateY(-3px); }
+.game-card + .game-card { margin-top: 24px; }
 .game-card .art { position: relative; overflow: hidden; background: #d9cdb0; aspect-ratio: 1024 / 500; }
 .game-card .art img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
 .game-card:hover .art img { transform: scale(1.035); }
@@ -347,7 +385,7 @@ h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.15; l
 	position: absolute;
 	inset: 0;
 	background:
-		radial-gradient(60% 70% at 85% 30%, color-mix(in srgb, var(--yarn-yellow) 35%, transparent), transparent 70%),
+		radial-gradient(60% 70% at 85% 30%, color-mix(in srgb, var(--pop) 35%, transparent), transparent 70%),
 		radial-gradient(50% 60% at 10% 90%, color-mix(in srgb, var(--accent) 14%, transparent), transparent 70%);
 	pointer-events: none;
 }
@@ -356,16 +394,16 @@ h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.15; l
 .logo-title {
 	font-size: clamp(3.2rem, 9vw, 5.6rem);
 	line-height: 1;
-	color: var(--yarn-yellow);
-	-webkit-text-stroke: 0.09em var(--yarn-outline);
+	color: var(--pop);
+	-webkit-text-stroke: 0.09em var(--ink);
 	paint-order: stroke fill;
-	text-shadow: 0 0.06em 0 var(--yarn-outline);
+	text-shadow: 0 0.06em 0 var(--ink);
 	letter-spacing: 0.01em;
 }
 .tagline { font-family: var(--display); font-weight: 700; font-size: clamp(1.3rem, 3vw, 1.7rem); margin: 10px 0 0; }
 .game-hero .lead { color: var(--muted); font-size: 1.12rem; max-width: 46ch; margin: 16px 0 20px; }
-.game-hero .btn { background: var(--yarn-green); color: #fff; box-shadow: 0 4px 0 #3c8a33; }
-.game-hero .btn:hover { box-shadow: 0 6px 0 #3c8a33; }
+.game-hero .btn { background: var(--go); color: #fff; box-shadow: 0 4px 0 var(--go-shade); }
+.game-hero .btn:hover { box-shadow: 0 6px 0 var(--go-shade); }
 .game-hero .btn.ghost { background: transparent; color: var(--fg); box-shadow: none; }
 
 .stage { position: relative; justify-self: center; width: min(300px, 78vw); }
@@ -385,6 +423,31 @@ h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.15; l
 @keyframes pounce { 0%, 60%, 100% { transform: translateY(0); } 70% { transform: translate(6px, -14px) rotate(-4deg); } 80% { transform: translateY(0); } }
 @keyframes spin { 0%, 100% { transform: translateY(0) rotate(-8deg); } 50% { transform: translateY(-14px) rotate(14deg); } }
 
+/* CatCafe is a landscape game: its hero is a shop window onto the village
+   instead of a phone, with the chef cat in front and a pastry bobbing. */
+.stage.wide { width: min(460px, 86vw); }
+.shopwin {
+	position: relative;
+	border-radius: 20px;
+	padding: 12px;
+	background: #9a6a42;
+	box-shadow: 0 30px 60px -20px rgb(60 30 10 / 0.5), inset 0 0 0 2px #6e4527, inset 0 -6px 0 #7a4f2e;
+	transform: rotate(-2deg);
+	animation: float-l 6s ease-in-out infinite;
+}
+.shopwin img { border-radius: 10px; aspect-ratio: 16 / 9; width: 100%; object-fit: cover; }
+.shopwin::after { content: ""; position: absolute; top: 12px; bottom: 12px; left: calc(50% - 5px); width: 10px; background: #9a6a42; box-shadow: inset 2px 0 0 #6e4527, inset -2px 0 0 #6e4527; }
+@keyframes float-l { 50% { transform: rotate(-2deg) translateY(-10px); } }
+.stage.wide .cat { width: 30%; left: -10%; bottom: -26%; }
+.stage .treat { position: absolute; width: 22%; right: -3%; top: -17%; filter: drop-shadow(0 8px 10px rgb(60 30 10 / 0.25)); animation: spin 6s ease-in-out infinite; }
+
+/* a row of characters, each with a name and a line about them */
+.cast { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.cast figure { margin: 0; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px 16px 18px; text-align: center; box-shadow: var(--shadow); }
+.cast img { width: 96px; margin: 0 auto 10px; filter: drop-shadow(0 6px 8px rgb(60 30 10 / 0.18)); }
+.cast b { display: block; font-family: var(--display); font-weight: 800; font-size: 1.15rem; }
+.cast figcaption span { display: block; color: var(--muted); font-size: 0.9rem; line-height: 1.45; margin-top: 4px; }
+
 .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
 .feature {
 	background: var(--card);
@@ -399,8 +462,8 @@ h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.15; l
 	width: 38px;
 	height: 38px;
 	border-radius: 12px;
-	background: var(--yarn-yellow);
-	color: var(--yarn-outline);
+	background: var(--pop);
+	color: var(--ink);
 	font-family: var(--display);
 	font-weight: 800;
 	font-size: 1.1rem;
@@ -470,7 +533,7 @@ h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.15; l
 .doc h1 { font-size: clamp(2rem, 5vw, 2.7rem); }
 .doc .meta { margin: 10px 0 28px; color: var(--muted); font-size: 0.9rem; }
 .doc h2 { font-size: 1.3rem; margin: 2.4rem 0 0.4rem; }
-.theme-yarntoss .doc h2 { font-size: 1.4rem; }
+.theme-yarntoss .doc h2, .theme-catcafe .doc h2 { font-size: 1.4rem; }
 .doc .callout + h2 { margin-top: 2.2rem; }
 .doc p { margin: 0.7rem 0; }
 .doc ul, .doc ol { padding-left: 1.25rem; margin: 0.6rem 0; }
@@ -497,7 +560,7 @@ footer.site .cols {
 	margin: 0 auto;
 	padding: 44px 24px 24px;
 	display: grid;
-	grid-template-columns: 1.6fr repeat(3, 1fr);
+	grid-template-columns: 1.3fr repeat(3, 1fr) auto;
 	gap: 28px;
 }
 footer.site h3 { font-family: var(--body); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--fg); margin-bottom: 12px; }
@@ -518,6 +581,8 @@ footer.site .base { max-width: var(--max); margin: 0 auto; padding: 18px 24px 40
 	footer.site .cols > div:first-child { grid-column: 1 / -1; }
 	.stage { margin: 24px auto 20px; }
 	.stage .cat { left: -30%; }
+	.stage.wide { margin-bottom: 56px; }
+	.stage.wide .cat { left: -4%; }
 }
 @media (max-width: 640px) {
 	body { font-size: 16.5px; }
@@ -547,6 +612,7 @@ footer.site .base { max-width: var(--max); margin: 0 auto; padding: 18px 24px 40
 	.band img { max-width: 160px; margin: 0 auto; }
 	.band p { margin-inline: auto; }
 	.links { grid-template-columns: 1fr; }
+	.cast { grid-template-columns: 1fr 1fr; gap: 12px; }
 	.gallery { padding-inline: 16px; margin-inline: -16px; grid-auto-columns: 62%; }
 	.doc { padding: 36px 16px 32px; }
 	footer.site .cols { padding: 36px 16px 20px; }
